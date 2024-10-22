@@ -1,0 +1,95 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": false,
+  "cssPreprocessor": "css",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "customTemplates": {
+        "index": ".config/templates/component/index.ts",
+        "interfaces": ".config/templates/component/interfaces.ts",
+        "component": ".config/templates/component/TemplateName.tsx",
+        "style": ".config/templates/component/styles.tsx",
+        "test": ".config/templates/component/TemplateName.spec.tsx"
+      },
+      "path": "src/common/components",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "withInterfaces": true
+    },
+    "hook": {
+      "customTemplates": {
+        "index": ".config/templates/hook/index.ts",
+        "interfaces": ".config/templates/hook/interfaces.ts",
+        "component": ".config/templates/hook/useTemplateName.ts",
+        "test": ".config/templates/hook/useTemplateName.spec.ts"
+      },
+      "path": "src/common/hooks",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "withInterfaces": true
+    },
+    "view": {
+      "customTemplates": {
+        "index": ".config/templates/view/index.ts",
+        "interfaces": ".config/templates/view/interfaces.ts",
+        "component": ".config/templates/view/TemplateName.tsx",
+        "style": ".config/templates/view/styles.tsx",
+        "test": ".config/templates/view/TemplateName.spec.tsx"
+      },
+      "path": "src",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "withInterfaces": true
+    },
+    "testComp": {
+      "customTemplates": {
+        "test": ".config/templates/component/TemplateName.spec.tsx"
+      },
+      "path": "src/common/components",
+      "withTest": true,
+      "withStyle": false,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": false,
+      "withInterfaces": false
+    },
+    "testHook": {
+      "customTemplates": {
+        "test": ".config/templates/hook/useTemplateName.spec.ts"
+      },
+      "path": "src/common/hooks",
+      "withTest": true,
+      "withStyle": false,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": false,
+      "withInterfaces": false
+    },
+    "utils": {
+      "customTemplates": {
+        "index": ".config/templates/utils/index.ts",
+        "interfaces": ".config/templates/utils/interfaces.ts",
+        "component": ".config/templates/utils/TemplateName.tsx",
+        "test": ".config/templates/utils/TemplateName.spec.tsx"
+      },
+      "path": "src/common/utils",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "withIndex": true,
+      "withInterfaces": true
+    }
+  },
+  "usesStyledComponents": false
+}

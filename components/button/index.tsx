@@ -1,37 +1,37 @@
-import { ActivityIndicator, Pressable, Text, View } from 'react-native';
+import {ActivityIndicator, Pressable, Text, View} from 'react-native';
 
-import { createButton } from '@gluestack-ui/button';
-import { AsForwarder, styled } from '@gluestack-style/react';
+import {createButton} from '@gluestack-ui/button';
+import {AsForwarder, styled} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   Pressable,
   {
-    'borderRadius': '$sm',
-    'backgroundColor': '$primary500',
-    'flexDirection': 'row',
-    'justifyContent': 'center',
-    'alignItems': 'center',
+    borderRadius: '$sm',
+    backgroundColor: '$primary500',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
 
-    '_text': {
+    _text: {
       color: '$text0',
       fontWeight: '$semibold',
     },
 
-    '_icon': {
+    _icon: {
       color: '$text0',
     },
 
-    '_spinner': {
+    _spinner: {
       props: {
         color: '$background0',
       },
     },
 
-    'variants': {
+    variants: {
       action: {
         primary: {
-          'bg': '$primary500',
-          'borderColor': '$primary300',
+          bg: '$primary500',
+          borderColor: '$primary300',
 
           ':hover': {
             bg: '$primary600',
@@ -43,8 +43,8 @@ const StyledRoot = styled(
             borderColor: '$primary700',
           },
 
-          '_text': {
-            'color': '$primary600',
+          _text: {
+            color: '$primary600',
             ':hover': {
               color: '$primary600',
             },
@@ -53,8 +53,8 @@ const StyledRoot = styled(
             },
           },
 
-          '_icon': {
-            'color': '$primary600',
+          _icon: {
+            color: '$primary600',
             ':hover': {
               color: '$primary600',
             },
@@ -63,8 +63,8 @@ const StyledRoot = styled(
             },
           },
 
-          '_spinner': {
-            'props': {
+          _spinner: {
+            props: {
               color: '$primary600',
             },
             ':hover': {
@@ -80,8 +80,8 @@ const StyledRoot = styled(
           },
         },
         secondary: {
-          'bg': '$secondary500',
-          'borderColor': '$secondary300',
+          bg: '$secondary500',
+          borderColor: '$secondary300',
 
           ':hover': {
             bg: '$secondary600',
@@ -93,8 +93,8 @@ const StyledRoot = styled(
             borderColor: '$secondary700',
           },
 
-          '_text': {
-            'color': '$secondary600',
+          _text: {
+            color: '$secondary600',
             ':hover': {
               color: '$secondary600',
             },
@@ -103,8 +103,8 @@ const StyledRoot = styled(
             },
           },
 
-          '_icon': {
-            'color': '$secondary600',
+          _icon: {
+            color: '$secondary600',
             ':hover': {
               color: '$secondary600',
             },
@@ -113,21 +113,21 @@ const StyledRoot = styled(
             },
           },
 
-          '_spinner': {
-            'props': {
+          _spinner: {
+            props: {
               color: '$secondary600',
             },
             ':hover': {
-              props: { color: '$secondary600' },
+              props: {color: '$secondary600'},
             },
             ':active': {
-              props: { color: '$secondary700' },
+              props: {color: '$secondary700'},
             },
           },
         },
         positive: {
-          'bg': '$success500',
-          'borderColor': '$success300',
+          bg: '$success500',
+          borderColor: '$success300',
 
           ':hover': {
             bg: '$success600',
@@ -139,8 +139,8 @@ const StyledRoot = styled(
             borderColor: '$success700',
           },
 
-          '_text': {
-            'color': '$success600',
+          _text: {
+            color: '$success600',
             ':hover': {
               color: '$success600',
             },
@@ -149,8 +149,8 @@ const StyledRoot = styled(
             },
           },
 
-          '_icon': {
-            'color': '$success600',
+          _icon: {
+            color: '$success600',
             ':hover': {
               color: '$success600',
             },
@@ -159,21 +159,21 @@ const StyledRoot = styled(
             },
           },
 
-          '_spinner': {
-            'props': {
+          _spinner: {
+            props: {
               color: '$success600',
             },
             ':hover': {
-              props: { color: '$success600' },
+              props: {color: '$success600'},
             },
             ':active': {
-              props: { color: '$success700' },
+              props: {color: '$success700'},
             },
           },
         },
         negative: {
-          'bg': '$error500',
-          'borderColor': '$error300',
+          bg: '$error500',
+          borderColor: '$error300',
 
           ':hover': {
             bg: '$error600',
@@ -185,8 +185,8 @@ const StyledRoot = styled(
             borderColor: '$error700',
           },
 
-          '_text': {
-            'color': '$error600',
+          _text: {
+            color: '$error600',
             ':hover': {
               color: '$error600',
             },
@@ -195,8 +195,8 @@ const StyledRoot = styled(
             },
           },
 
-          '_icon': {
-            'color': '$error600',
+          _icon: {
+            color: '$error600',
             ':hover': {
               color: '$error600',
             },
@@ -205,21 +205,21 @@ const StyledRoot = styled(
             },
           },
 
-          '_spinner': {
-            'props': {
+          _spinner: {
+            props: {
               color: '$error600',
             },
             ':hover': {
-              props: { color: '$error600' },
+              props: {color: '$error600'},
             },
             ':active': {
-              props: { color: '$error700' },
+              props: {color: '$error700'},
             },
           },
         },
 
         default: {
-          'bg': '$transparent',
+          bg: '$transparent',
 
           ':hover': {
             bg: '$background50',
@@ -233,7 +233,7 @@ const StyledRoot = styled(
 
       variant: {
         link: {
-          'px': '$0',
+          px: '$0',
           ':hover': {
             _text: {
               textDecorationLine: 'underline',
@@ -246,8 +246,8 @@ const StyledRoot = styled(
           },
         },
         outline: {
-          'bg': 'transparent',
-          'borderWidth': '$1',
+          bg: 'transparent',
+          borderWidth: '$1',
 
           ':hover': {
             bg: '$background50',
@@ -259,7 +259,7 @@ const StyledRoot = styled(
         },
         solid: {
           _text: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -269,22 +269,22 @@ const StyledRoot = styled(
           },
 
           _spinner: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
 
           _icon: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
         },
@@ -363,13 +363,13 @@ const StyledRoot = styled(
         },
       },
     },
-    'compoundVariants': [
+    compoundVariants: [
       {
         action: 'primary',
         variant: 'link',
         value: {
-          'px': '$0',
-          'bg': 'transparent',
+          px: '$0',
+          bg: 'transparent',
 
           ':hover': {
             bg: 'transparent',
@@ -384,8 +384,8 @@ const StyledRoot = styled(
         action: 'secondary',
         variant: 'link',
         value: {
-          'px': '$0',
-          'bg': 'transparent',
+          px: '$0',
+          bg: 'transparent',
 
           ':hover': {
             bg: 'transparent',
@@ -400,8 +400,8 @@ const StyledRoot = styled(
         action: 'positive',
         variant: 'link',
         value: {
-          'px': '$0',
-          'bg': 'transparent',
+          px: '$0',
+          bg: 'transparent',
 
           ':hover': {
             bg: 'transparent',
@@ -416,8 +416,8 @@ const StyledRoot = styled(
         action: 'negative',
         variant: 'link',
         value: {
-          'px': '$0',
-          'bg': 'transparent',
+          px: '$0',
+          bg: 'transparent',
 
           ':hover': {
             bg: 'transparent',
@@ -432,7 +432,7 @@ const StyledRoot = styled(
         action: 'primary',
         variant: 'outline',
         value: {
-          'bg': 'transparent',
+          bg: 'transparent',
 
           ':hover': {
             bg: '$background50',
@@ -447,7 +447,7 @@ const StyledRoot = styled(
         action: 'secondary',
         variant: 'outline',
         value: {
-          'bg': 'transparent',
+          bg: 'transparent',
 
           ':hover': {
             bg: '$background50',
@@ -462,7 +462,7 @@ const StyledRoot = styled(
         action: 'positive',
         variant: 'outline',
         value: {
-          'bg': 'transparent',
+          bg: 'transparent',
 
           ':hover': {
             bg: '$background50',
@@ -477,7 +477,7 @@ const StyledRoot = styled(
         action: 'negative',
         variant: 'outline',
         value: {
-          'bg': 'transparent',
+          bg: 'transparent',
 
           ':hover': {
             bg: '$background50',
@@ -493,7 +493,7 @@ const StyledRoot = styled(
         variant: 'solid',
         value: {
           _text: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -503,7 +503,7 @@ const StyledRoot = styled(
           },
 
           _icon: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -513,12 +513,12 @@ const StyledRoot = styled(
           },
 
           _spinner: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
         },
@@ -528,7 +528,7 @@ const StyledRoot = styled(
         variant: 'solid',
         value: {
           _text: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -538,7 +538,7 @@ const StyledRoot = styled(
           },
 
           _icon: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -548,12 +548,12 @@ const StyledRoot = styled(
           },
 
           _spinner: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
         },
@@ -563,7 +563,7 @@ const StyledRoot = styled(
         variant: 'solid',
         value: {
           _text: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -573,23 +573,23 @@ const StyledRoot = styled(
           },
 
           _icon: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
             ':active': {
               color: '$text0',
             },
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
           },
 
           _spinner: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
         },
@@ -599,7 +599,7 @@ const StyledRoot = styled(
         variant: 'solid',
         value: {
           _text: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -609,7 +609,7 @@ const StyledRoot = styled(
           },
 
           _icon: {
-            'color': '$text0',
+            color: '$text0',
             ':hover': {
               color: '$text0',
             },
@@ -619,25 +619,25 @@ const StyledRoot = styled(
           },
 
           _spinner: {
-            'props': { color: '$text0' },
+            props: {color: '$text0'},
             ':hover': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
             ':active': {
-              props: { color: '$text0' },
+              props: {color: '$text0'},
             },
           },
         },
       },
     ],
 
-    'props': {
+    props: {
       size: 'md',
       variant: 'solid',
       action: 'primary',
     },
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         outlineWidth: '$0.5',
         outlineColor: '$primary700',
@@ -652,7 +652,7 @@ const StyledRoot = styled(
   {
     descendantStyle: ['_text', '_spinner', '_icon'],
     ancestorStyle: ['_button'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -694,23 +694,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -757,7 +757,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledButtonText = styled(
@@ -770,7 +770,7 @@ const StyledButtonText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledGroup = styled(
   View,
@@ -816,19 +816,19 @@ const StyledGroup = styled(
         },
       },
       space: {
-        'xs': {
+        xs: {
           gap: '$1',
         },
-        'sm': {
+        sm: {
           gap: '$2',
         },
-        'md': {
+        md: {
           gap: '$3',
         },
-        'lg': {
+        lg: {
           gap: '$4',
         },
-        'xl': {
+        xl: {
           gap: '$5',
         },
         '2xl': {
@@ -854,7 +854,7 @@ const StyledGroup = styled(
   },
   {
     descendantStyle: ['_button'],
-  }
+  },
 );
 
 const StyledSpinner = styled(
@@ -863,7 +863,7 @@ const StyledSpinner = styled(
   {
     ancestorStyle: ['_spinner'],
     resolveProps: ['color'],
-  }
+  },
 );
 
 const StyledIcon = styled(
@@ -880,7 +880,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -888,7 +888,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -896,7 +896,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -904,7 +904,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -912,7 +912,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -934,7 +934,7 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 const UIButton = createButton({
   Root: StyledRoot,

@@ -1,6 +1,6 @@
-import { AnimationResolver } from '@gluestack-style/animation-resolver';
-import { MotionAnimationDriver } from '@gluestack-style/legend-motion-animation-driver';
-import { createConfig } from '@gluestack-style/react';
+import {AnimationResolver} from '@gluestack-style/animation-resolver';
+import {MotionAnimationDriver} from '@gluestack-style/legend-motion-animation-driver';
+import {createConfig} from '@gluestack-style/react';
 
 export const gluestackUIConfig = createConfig({
   aliases: {
@@ -316,7 +316,7 @@ export const gluestackUIConfig = createConfig({
       primary200: '#7CC2FF',
       primary300: '#4AA9FF',
       primary400: '#1A91FF',
-      primary500: '#0077E6',
+      primary500: '#235086',
       primary600: '#005DB4',
       primary700: '#004282',
       primary800: '#002851',
@@ -387,7 +387,7 @@ export const gluestackUIConfig = createConfig({
       black: '#000000',
     },
     space: {
-      'px': '1px',
+      px: '1px',
       '0': 0,
       '0.5': 2,
       '1': 4,
@@ -432,7 +432,7 @@ export const gluestackUIConfig = createConfig({
       '3/6': '50%',
       '4/6': '66.666%',
       '5/6': '83.333%',
-      'full': '100%',
+      full: '100%',
     },
     borderWidths: {
       '0': 0,
@@ -442,15 +442,15 @@ export const gluestackUIConfig = createConfig({
       '8': 8,
     },
     radii: {
-      'none': 0,
-      'xs': 2,
-      'sm': 4,
-      'md': 6,
-      'lg': 8,
-      'xl': 12,
+      none: 0,
+      xs: 2,
+      sm: 4,
+      md: 6,
+      lg: 8,
+      xl: 12,
       '2xl': 16,
       '3xl': 24,
-      'full': 9999,
+      full: 9999,
     },
     breakpoints: {
       base: 0,
@@ -468,20 +468,20 @@ export const gluestackUIConfig = createConfig({
       xl: '@media screen and (min-width: 1280px)',
     },
     letterSpacings: {
-      'xs': -0.4,
-      'sm': -0.2,
-      'md': 0,
-      'lg': 0.2,
-      'xl': 0.4,
+      xs: -0.4,
+      sm: -0.2,
+      md: 0,
+      lg: 0.2,
+      xl: 0.4,
       '2xl': 1.6,
     },
     lineHeights: {
       '2xs': 16,
-      'xs': 18,
-      'sm': 20,
-      'md': 22,
-      'lg': 24,
-      'xl': 28,
+      xs: 18,
+      sm: 20,
+      md: 22,
+      lg: 24,
+      xl: 28,
       '2xl': 32,
       '3xl': 40,
       '4xl': 48,
@@ -508,11 +508,11 @@ export const gluestackUIConfig = createConfig({
     },
     fontSizes: {
       '2xs': 10,
-      'xs': 12,
-      'sm': 14,
-      'md': 16,
-      'lg': 18,
-      'xl': 20,
+      xs: 12,
+      sm: 14,
+      md: 16,
+      lg: 18,
+      xl: 20,
       '2xl': 24,
       '3xl': 30,
       '4xl': 36,
@@ -717,6 +717,7 @@ type Config = typeof gluestackUIConfig; // Assuming `config` is defined elsewher
 // type Components = typeof gluestackUIConfig.components; // Assuming `config` is defined elsewhere
 
 declare module '@gluestack-style/react' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   interface ICustomConfig extends Config {}
   // interface ICustomComponents extends Components {}
 }

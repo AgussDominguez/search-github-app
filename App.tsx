@@ -1,9 +1,9 @@
-import React from 'react';
-import {GluestackUIProvider, Text} from './components';
-import {View} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
+import {View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {GluestackUIProvider, Text} from './components';
 
 const Tab = createBottomTabNavigator();
 function HomeScreen() {

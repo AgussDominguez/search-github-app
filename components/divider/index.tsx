@@ -1,6 +1,6 @@
-import { createDivider } from '@gluestack-ui/divider';
-import { styled } from '@gluestack-style/react';
-import { View } from 'react-native';
+import {createDivider} from '@gluestack-ui/divider';
+import {styled} from '@gluestack-style/react';
+import {View} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -24,7 +24,7 @@ const StyledRoot = styled(
       orientation: 'horizontal',
     },
   },
-  {}
+  {},
 );
 
-export const Divider = createDivider({ Root: StyledRoot });
+export const Divider = createDivider({Root: StyledRoot});

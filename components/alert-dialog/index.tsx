@@ -3,9 +3,9 @@ import {
   AnimatedView,
   AnimatedPressable,
 } from '@gluestack-style/animation-resolver';
-import { createAlertDialog } from '@gluestack-ui/alert-dialog';
-import { View, Pressable, ScrollView } from 'react-native';
-import { styled } from '@gluestack-style/react';
+import {createAlertDialog} from '@gluestack-ui/alert-dialog';
+import {View, Pressable, ScrollView} from 'react-native';
+import {styled} from '@gluestack-style/react';
 const StyledRoot = styled(
   View,
   {
@@ -16,14 +16,14 @@ const StyledRoot = styled(
 
     variants: {
       size: {
-        xs: { _content: { w: '60%', maxWidth: 360 } },
-        sm: { _content: { w: '70%', maxWidth: 420 } },
-        md: { _content: { w: '80%', maxWidth: 510 } },
-        lg: { _content: { w: '90%', maxWidth: 640 } },
-        full: { _content: { w: '$full' } },
+        xs: {_content: {w: '60%', maxWidth: 360}},
+        sm: {_content: {w: '70%', maxWidth: 420}},
+        md: {_content: {w: '80%', maxWidth: 510}},
+        lg: {_content: {w: '90%', maxWidth: 640}},
+        full: {_content: {w: '$full'}},
       },
     },
-    defaultProps: { size: 'md' },
+    defaultProps: {size: 'md'},
 
     _web: {
       pointerEvents: 'box-none',
@@ -31,15 +31,15 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_content'],
-  }
+  },
 );
 
 const StyledContent = styled(
   AnimatedView,
   {
-    'bg': '$background50',
-    'rounded': '$lg',
-    'overflow': 'hidden',
+    bg: '$background50',
+    rounded: '$lg',
+    overflow: 'hidden',
 
     //@ts-ignore
     ':initial': {
@@ -68,27 +68,27 @@ const StyledContent = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       softShadow: '3',
     },
   },
   {
     ancestorStyle: ['_content'],
-  }
+  },
 );
 
 const StyledCloseButton = styled(
   Pressable,
   {
-    'zIndex': 1,
-    'rounded': '$sm',
-    'p': '$2',
+    zIndex: 1,
+    rounded: '$sm',
+    p: '$2',
 
-    '_icon': {
+    _icon: {
       color: '$background400',
     },
 
-    '_text': {
+    _text: {
       color: '$background400',
     },
 
@@ -122,14 +122,14 @@ const StyledCloseButton = styled(
       },
     },
 
-    '_web': {
+    _web: {
       outlineWidth: 0,
       cursor: 'pointer',
     },
   },
   {
     descendantStyle: ['_icon', '_text'],
-  }
+  },
 );
 const StyledHeader = styled(
   View,
@@ -140,7 +140,7 @@ const StyledHeader = styled(
     alignItems: 'center',
     flexDirection: 'row',
   },
-  {}
+  {},
 );
 
 const StyledFooter = styled(
@@ -153,9 +153,9 @@ const StyledFooter = styled(
     flexWrap: 'wrap',
     borderColor: '$border300',
   },
-  {}
+  {},
 );
-const StyledBody = styled(ScrollView, { px: '$4', py: '$2' }, {});
+const StyledBody = styled(ScrollView, {px: '$4', py: '$2'}, {});
 
 const StyledBackdrop = styled(
   AnimatedPressable,
@@ -183,19 +183,19 @@ const StyledBackdrop = styled(
       },
     },
 
-    'position': 'absolute',
-    'left': 0,
-    'top': 0,
-    'right': 0,
-    'bottom': 0,
-    'bg': '$background950',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    bg: '$background950',
 
     // @ts-ignore
-    '_web': {
+    _web: {
       cursor: 'default',
     },
   },
-  {}
+  {},
 );
 
 const AccessibleAlertDialog = createAlertDialog({

@@ -1,45 +1,45 @@
-import { createInput } from '@gluestack-ui/input';
-import { styled, AsForwarder } from '@gluestack-style/react';
-import { View, Pressable, TextInput } from 'react-native';
+import {createInput} from '@gluestack-ui/input';
+import {styled, AsForwarder} from '@gluestack-style/react';
+import {View, Pressable, TextInput} from 'react-native';
 
 const StyledRoot = styled(
   View,
   {
-    'borderWidth': 1,
-    'borderColor': '$background300',
-    'borderRadius': '$sm',
-    'flexDirection': 'row',
-    'overflow': 'hidden',
-    'alignContent': 'center',
+    borderWidth: 1,
+    borderColor: '$background300',
+    borderRadius: '$sm',
+    flexDirection: 'row',
+    overflow: 'hidden',
+    alignContent: 'center',
 
     ':hover': {
       borderColor: '$border400',
     },
 
     ':focus': {
-      'borderColor': '$primary700',
+      borderColor: '$primary700',
       ':hover': {
         borderColor: '$primary700',
       },
     },
 
     ':disabled': {
-      'opacity': 0.4,
+      opacity: 0.4,
       ':hover': {
         borderColor: '$background300',
       },
     },
 
-    '_input': {
+    _input: {
       py: 'auto',
       px: '$3',
     },
 
-    '_icon': {
+    _icon: {
       color: '$text400',
     },
 
-    'variants': {
+    variants: {
       size: {
         xl: {
           h: '$12',
@@ -96,7 +96,7 @@ const StyledRoot = styled(
       },
       variant: {
         underlined: {
-          '_input': {
+          _input: {
             _web: {
               outlineWidth: 0,
               outline: 'none',
@@ -104,9 +104,9 @@ const StyledRoot = styled(
             px: '$0',
           },
 
-          'borderWidth': 0,
-          'borderRadius': 0,
-          'borderBottomWidth': '$1',
+          borderWidth: 0,
+          borderRadius: 0,
+          borderBottomWidth: '$1',
 
           ':focus': {
             borderColor: '$primary700',
@@ -116,16 +116,16 @@ const StyledRoot = styled(
           },
 
           ':invalid': {
-            'borderBottomWidth': 2,
-            'borderBottomColor': '$error700',
-            '_web': {
+            borderBottomWidth: 2,
+            borderBottomColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 -1px 0 0 $error700',
             },
             ':hover': {
               borderBottomColor: '$error700',
             },
             ':focus': {
-              'borderBottomColor': '$error700',
+              borderBottomColor: '$error700',
               ':hover': {
                 borderBottomColor: '$error700',
                 _web: {
@@ -145,7 +145,7 @@ const StyledRoot = styled(
         },
 
         outline: {
-          '_input': {
+          _input: {
             _web: {
               outlineWidth: 0,
               outline: 'none',
@@ -160,15 +160,15 @@ const StyledRoot = styled(
           },
 
           ':invalid': {
-            'borderColor': '$error700',
-            '_web': {
+            borderColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $error700',
             },
             ':hover': {
               borderColor: '$error700',
             },
             ':focus': {
-              'borderColor': '$error700',
+              borderColor: '$error700',
               ':hover': {
                 borderColor: '$error700',
                 _web: {
@@ -188,9 +188,9 @@ const StyledRoot = styled(
         },
 
         rounded: {
-          'borderRadius': 999,
+          borderRadius: 999,
 
-          '_input': {
+          _input: {
             px: '$4',
             _web: {
               outlineWidth: 0,
@@ -206,15 +206,15 @@ const StyledRoot = styled(
           },
 
           ':invalid': {
-            'borderColor': '$error700',
-            '_web': {
+            borderColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $error700',
             },
             ':hover': {
               borderColor: '$error700',
             },
             ':focus': {
-              'borderColor': '$error700',
+              borderColor: '$error700',
               ':hover': {
                 borderColor: '$error700',
                 _web: {
@@ -235,14 +235,14 @@ const StyledRoot = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       size: 'md',
       variant: 'outline',
     },
   },
   {
     descendantStyle: ['_input', '_icon'],
-  }
+  },
 );
 
 const StyledIcon = styled(
@@ -259,7 +259,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -267,7 +267,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -275,7 +275,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -283,7 +283,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -291,7 +291,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -316,7 +316,7 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 const StyledSlot = styled(
@@ -332,7 +332,7 @@ const StyledSlot = styled(
   },
   {
     descendantStyle: ['_icon'],
-  }
+  },
 );
 
 const StyledInputField = styled(
@@ -346,7 +346,7 @@ const StyledInputField = styled(
     },
 
     _web: {
-      'cursor': 'text',
+      cursor: 'text',
       ':disabled': {
         cursor: 'not-allowed',
       },
@@ -357,23 +357,23 @@ const StyledInputField = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -407,7 +407,7 @@ const StyledInputField = styled(
     propertyTokenMap: {
       placeholderTextColor: 'colors',
     },
-  }
+  },
 );
 const UIInput = createInput({
   Root: StyledRoot,

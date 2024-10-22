@@ -1,7 +1,7 @@
 import React from 'react';
-import { createIcon } from '@gluestack-ui/icon';
-import { styled, AsForwarder } from '@gluestack-style/react';
-import { Path } from 'react-native-svg';
+import {createIcon} from '@gluestack-ui/icon';
+import {styled, AsForwarder} from '@gluestack-style/react';
+import {Path} from 'react-native-svg';
 
 const StyledRoot = styled(
   AsForwarder,
@@ -17,7 +17,7 @@ const StyledRoot = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -25,7 +25,7 @@ const StyledRoot = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -33,7 +33,7 @@ const StyledRoot = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -41,7 +41,7 @@ const StyledRoot = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -49,7 +49,7 @@ const StyledRoot = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -74,7 +74,7 @@ const StyledRoot = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 const IconRoot = styled(
   AsForwarder,
@@ -90,7 +90,7 @@ const IconRoot = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -98,7 +98,7 @@ const IconRoot = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -106,7 +106,7 @@ const IconRoot = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -114,7 +114,7 @@ const IconRoot = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -122,7 +122,7 @@ const IconRoot = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -147,17 +147,17 @@ const IconRoot = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 export const Icon = createIcon({
   Root: StyledRoot,
 });
 
 type ParameterTypes = Omit<Parameters<typeof createIcon>[0], 'Root'>;
-const createIconUI = ({ ...props }: ParameterTypes) =>
-  createIcon({ Root: IconRoot, ...props });
+const createIconUI = ({...props}: ParameterTypes) =>
+  createIcon({Root: IconRoot, ...props});
 
-export { createIconUI as createIcon };
+export {createIconUI as createIcon};
 
 // All Icons
 const AddIcon = createIcon({
@@ -184,7 +184,7 @@ const AddIcon = createIcon({
 });
 
 AddIcon.displayName = 'AddIcon';
-export { AddIcon };
+export {AddIcon};
 
 export const AlertCircleIcon = createIcon({
   Root: StyledRoot,
@@ -365,7 +365,7 @@ const AtSignIcon = createIcon({
 
 AtSignIcon.displayName = 'AtSignIcon';
 
-export { AtSignIcon };
+export {AtSignIcon};
 
 const BellIcon = createIcon({
   Root: StyledRoot,
@@ -392,7 +392,7 @@ const BellIcon = createIcon({
 
 BellIcon.displayName = 'BellIcon';
 
-export { BellIcon };
+export {BellIcon};
 
 const CalendarDaysIcon = createIcon({
   Root: StyledRoot,
@@ -475,7 +475,7 @@ const CalendarDaysIcon = createIcon({
 
 CalendarDaysIcon.displayName = 'CalendarDaysIcon';
 
-export { CalendarDaysIcon };
+export {CalendarDaysIcon};
 
 const CheckIcon = createIcon({
   Root: StyledRoot,
@@ -519,7 +519,7 @@ const CheckCircleIcon = createIcon({
 CheckIcon.displayName = 'CheckIcon';
 CheckCircleIcon.displayName = 'CheckCircleIcon';
 
-export { CheckIcon, CheckCircleIcon };
+export {CheckIcon, CheckCircleIcon};
 
 const ChevronUpIcon = createIcon({
   Root: StyledRoot,
@@ -696,7 +696,7 @@ const CircleIcon = createIcon({
 
 CircleIcon.displayName = 'CircleIcon';
 
-export { CircleIcon };
+export {CircleIcon};
 
 const ClockIcon = createIcon({
   Root: StyledRoot,
@@ -723,7 +723,7 @@ const ClockIcon = createIcon({
 
 ClockIcon.displayName = 'ClockIcon';
 
-export { ClockIcon };
+export {ClockIcon};
 
 const CloseIcon = createIcon({
   Root: StyledRoot,
@@ -781,7 +781,7 @@ const CloseCircleIcon = createIcon({
 CloseIcon.displayName = 'CloseIcon';
 CloseCircleIcon.displayName = 'CloseCircleIcon';
 
-export { CloseIcon, CloseCircleIcon };
+export {CloseIcon, CloseCircleIcon};
 
 const CopyIcon = createIcon({
   Root: StyledRoot,
@@ -808,7 +808,7 @@ const CopyIcon = createIcon({
 
 CopyIcon.displayName = 'CopyIcon';
 
-export { CopyIcon };
+export {CopyIcon};
 
 const DownloadIcon = createIcon({
   Root: StyledRoot,
@@ -842,7 +842,7 @@ const DownloadIcon = createIcon({
 
 DownloadIcon.displayName = 'DownloadIcon';
 
-export { DownloadIcon };
+export {DownloadIcon};
 
 const EditIcon = createIcon({
   Root: StyledRoot,
@@ -869,7 +869,7 @@ const EditIcon = createIcon({
 
 EditIcon.displayName = 'EditIcon';
 
-export { EditIcon };
+export {EditIcon};
 
 const EyeIcon = createIcon({
   Root: StyledRoot,
@@ -935,7 +935,7 @@ const EyeOffIcon = createIcon({
 
 EyeOffIcon.displayName = 'EyeOffIcon';
 
-export { EyeIcon, EyeOffIcon };
+export {EyeIcon, EyeOffIcon};
 
 const FavouriteIcon = createIcon({
   Root: StyledRoot,
@@ -955,7 +955,7 @@ const FavouriteIcon = createIcon({
 
 FavouriteIcon.displayName = 'FavouriteIcon';
 
-export { FavouriteIcon };
+export {FavouriteIcon};
 
 const GlobeIcon = createIcon({
   Root: StyledRoot,
@@ -989,7 +989,7 @@ const GlobeIcon = createIcon({
 
 GlobeIcon.displayName = 'GlobeIcon';
 
-export { GlobeIcon };
+export {GlobeIcon};
 
 const GripVerticalIcon = createIcon({
   Root: StyledRoot,
@@ -1044,7 +1044,7 @@ const GripVerticalIcon = createIcon({
 
 GripVerticalIcon.displayName = 'GripVerticalIcon';
 
-export { GripVerticalIcon };
+export {GripVerticalIcon};
 
 export const HelpCircleIcon = createIcon({
   Root: StyledRoot,
@@ -1166,7 +1166,7 @@ const ExternalLinkIcon = createIcon({
 
 ExternalLinkIcon.displayName = 'ExternalLinkIcon';
 
-export { LinkIcon, ExternalLinkIcon };
+export {LinkIcon, ExternalLinkIcon};
 
 const LoaderIcon = createIcon({
   Root: StyledRoot,
@@ -1186,7 +1186,7 @@ const LoaderIcon = createIcon({
 
 LoaderIcon.displayName = 'LoaderIcon';
 
-export { LoaderIcon };
+export {LoaderIcon};
 
 const LockIcon = createIcon({
   Root: StyledRoot,
@@ -1213,7 +1213,7 @@ const LockIcon = createIcon({
 
 LockIcon.displayName = 'LockIcon';
 
-export { LockIcon };
+export {LockIcon};
 
 const MailIcon = createIcon({
   Root: StyledRoot,
@@ -1240,7 +1240,7 @@ const MailIcon = createIcon({
 
 MailIcon.displayName = 'MailIcon';
 
-export { MailIcon };
+export {MailIcon};
 
 export const MenuIcon = createIcon({
   Root: StyledRoot,
@@ -1292,7 +1292,7 @@ const MessageCircleIcon = createIcon({
 
 MessageCircleIcon.displayName = 'MessageCircleIcon';
 
-export { MessageCircleIcon };
+export {MessageCircleIcon};
 
 export const MoonIcon = createIcon({
   Root: StyledRoot,
@@ -1330,7 +1330,7 @@ const PaperclipIcon = createIcon({
 
 PaperclipIcon.displayName = 'PaperclipIcon';
 
-export { PaperclipIcon };
+export {PaperclipIcon};
 
 const PhoneIcon = createIcon({
   Root: StyledRoot,
@@ -1350,7 +1350,7 @@ const PhoneIcon = createIcon({
 
 PhoneIcon.displayName = 'PhoneIcon';
 
-export { PhoneIcon };
+export {PhoneIcon};
 
 const PlayIcon = createIcon({
   Root: StyledRoot,
@@ -1377,7 +1377,7 @@ const PlayIcon = createIcon({
 
 PlayIcon.displayName = 'PlayIcon';
 
-export { PlayIcon };
+export {PlayIcon};
 
 export const RemoveIcon = createIcon({
   Root: StyledRoot,
@@ -1482,7 +1482,7 @@ const Repeat1Icon = createIcon({
 
 Repeat1Icon.displayName = 'Repeat1Icon';
 
-export { RepeatIcon, Repeat1Icon };
+export {RepeatIcon, Repeat1Icon};
 
 export const SearchIcon = createIcon({
   Root: StyledRoot,
@@ -1534,7 +1534,7 @@ const SettingsIcon = createIcon({
 
 SettingsIcon.displayName = 'SettingsIcon';
 
-export { SettingsIcon };
+export {SettingsIcon};
 
 const ShareIcon = createIcon({
   Root: StyledRoot,
@@ -1582,7 +1582,7 @@ const ShareIcon = createIcon({
 
 ShareIcon.displayName = 'ShareIcon';
 
-export { ShareIcon };
+export {ShareIcon};
 
 const SlashIcon = createIcon({
   Root: StyledRoot,
@@ -1609,7 +1609,7 @@ const SlashIcon = createIcon({
 
 SlashIcon.displayName = 'SlashIcon';
 
-export { SlashIcon };
+export {SlashIcon};
 
 const StarIcon = createIcon({
   Root: StyledRoot,
@@ -1629,7 +1629,7 @@ const StarIcon = createIcon({
 
 StarIcon.displayName = 'StarIcon';
 
-export { StarIcon };
+export {StarIcon};
 
 export const SunIcon = createIcon({
   Root: StyledRoot,
@@ -1737,7 +1737,7 @@ const ThreeDotsIcon = createIcon({
 
 ThreeDotsIcon.displayName = 'ThreeDotsIcon';
 
-export { ThreeDotsIcon };
+export {ThreeDotsIcon};
 
 const TrashIcon = createIcon({
   Root: StyledRoot,
@@ -1771,7 +1771,7 @@ const TrashIcon = createIcon({
 
 TrashIcon.displayName = 'TrashIcon';
 
-export { TrashIcon };
+export {TrashIcon};
 
 const UnlockIcon = createIcon({
   Root: StyledRoot,
@@ -1798,4 +1798,4 @@ const UnlockIcon = createIcon({
 
 UnlockIcon.displayName = 'UnlockIcon';
 
-export { UnlockIcon };
+export {UnlockIcon};

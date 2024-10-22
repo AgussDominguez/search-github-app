@@ -1,17 +1,17 @@
-import { styled } from '@gluestack-style/react';
-import { Switch as RNSwitch } from 'react-native';
-import { createSwitch } from '@gluestack-ui/switch';
+import {styled} from '@gluestack-style/react';
+import {Switch as RNSwitch} from 'react-native';
+import {createSwitch} from '@gluestack-ui/switch';
 
 const StyledRoot = styled(
   RNSwitch,
   {
-    'props': {
+    props: {
       // todo: add support for this in style.gluestack.io
       // trackColor: { false: '$background300', true: '$primary600' },
 
       // hacky fix for the above
       //@ts-ignore
-      trackColor: { false: '$background300', true: '$primary600' },
+      trackColor: {false: '$background300', true: '$primary600'},
       thumbColor: '$background600',
       //@ts-ignore
       activeThumbColor: '$background200',
@@ -20,9 +20,9 @@ const StyledRoot = styled(
       ios_backgroundColor: '$background300',
     },
 
-    'borderRadius': '$full',
+    borderRadius: '$full',
 
-    'variants': {
+    variants: {
       //@ts-ignore
 
       size: {
@@ -44,7 +44,7 @@ const StyledRoot = styled(
       },
     },
 
-    '_web': {
+    _web: {
       ':focus': {
         outlineWidth: 0,
         outlineColor: '$primary700',
@@ -52,26 +52,26 @@ const StyledRoot = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       size: 'md',
     },
 
     ':disabled': {
-      '_web': {
-        'cursor': 'pointer',
+      _web: {
+        cursor: 'pointer',
         ':disabled': {
           cursor: 'not-allowed',
         },
       },
-      'opacity': 0.4,
+      opacity: 0.4,
       //@ts-ignore
-      'trackColor': { false: '$background300', true: '$primary600' },
+      trackColor: {false: '$background300', true: '$primary600'},
       // for ios specifically in unchecked state
-      'ios_backgroundColor': '$background300',
+      ios_backgroundColor: '$background300',
       ':hover': {
         props: {
           //@ts-ignore
-          trackColor: { false: '$background300', true: '$primary600' },
+          trackColor: {false: '$background300', true: '$primary600'},
         },
       },
     },
@@ -83,14 +83,14 @@ const StyledRoot = styled(
     },
 
     ':hover': {
-      'props': {
+      props: {
         // todo: add support for this in style.gluestack.io
         // trackColor: { false: '$background400', true: '$primary700' },
 
         // hacky fix for the above
         //@ts-ignore
 
-        trackColor: { false: '$background400', true: '$primary700' },
+        trackColor: {false: '$background400', true: '$primary700'},
         ios_backgroundColor: '$background400',
       },
       ':invalid': {
@@ -101,7 +101,7 @@ const StyledRoot = styled(
           // hacky fix for the above
           //@ts-ignore
 
-          trackColor: { false: '$background300', true: '$primary700' },
+          trackColor: {false: '$background300', true: '$primary700'},
         },
       },
     },
@@ -138,7 +138,7 @@ const StyledRoot = styled(
         return resolveColor;
       },
     },
-  }
+  },
 );
 
 export const Switch = createSwitch({

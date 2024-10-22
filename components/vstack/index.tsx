@@ -1,5 +1,5 @@
-import { styled } from '@gluestack-style/react';
-import { View } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {View} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -7,19 +7,19 @@ const StyledRoot = styled(
     flexDirection: 'column',
     variants: {
       space: {
-        'xs': {
+        xs: {
           gap: `$1`,
         },
-        'sm': {
+        sm: {
           gap: `$2`,
         },
-        'md': {
+        md: {
           gap: `$3`,
         },
-        'lg': {
+        lg: {
           gap: `$4`,
         },
-        'xl': {
+        xl: {
           gap: `$5`,
         },
         '2xl': {
@@ -39,7 +39,7 @@ const StyledRoot = styled(
       },
     },
   },
-  {}
+  {},
 );
 
 export const VStack = StyledRoot;

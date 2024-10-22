@@ -8,7 +8,9 @@
     "lint": "eslint . --ignore-pattern \"components/*\"",
     "lint:fix": "eslint -f .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "prettier": "npx prettier -w .",
+    "commit": "npx gitmoji-cli -c"
   },
   "dependencies": {
     "@gluestack-style/react": "^1.0.57",

@@ -1,10 +1,10 @@
-import { createToast, createToastHook } from '@gluestack-ui/toast';
+import {createToast, createToastHook} from '@gluestack-ui/toast';
 import {
   AnimatePresence,
   AnimatedView,
 } from '@gluestack-style/animation-resolver';
-import { styled } from '@gluestack-style/react';
-import { Text, View } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {Text, View} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -79,7 +79,7 @@ const StyledRoot = styled(
       action: 'attention',
     },
   },
-  { descendantStyle: ['_icon', '_title', '_description'] }
+  {descendantStyle: ['_icon', '_title', '_description']},
 );
 const StyledTitle = styled(
   Text,
@@ -119,23 +119,23 @@ const StyledTitle = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -180,7 +180,7 @@ const StyledTitle = styled(
       size: 'md',
     },
   },
-  { ancestorStyle: ['_title'] }
+  {ancestorStyle: ['_title']},
 );
 
 const StyledDescription = styled(
@@ -221,23 +221,23 @@ const StyledDescription = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -282,7 +282,7 @@ const StyledDescription = styled(
       size: 'sm',
     },
   },
-  { ancestorStyle: ['_description'] }
+  {ancestorStyle: ['_description']},
 );
 const AnimationWrapper = styled(AnimatedView, {});
 

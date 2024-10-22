@@ -1,10 +1,10 @@
-import { createCheckbox } from '@gluestack-ui/checkbox';
-import { View, Pressable, Text } from 'react-native';
+import {createCheckbox} from '@gluestack-ui/checkbox';
+import {View, Pressable, Text} from 'react-native';
 
-import { Platform } from 'react-native';
+import {Platform} from 'react-native';
 
-import { Check } from 'lucide-react-native';
-import { styled } from '@gluestack-style/react';
+import {Check} from 'lucide-react-native';
+import {styled} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   // @ts-ignore
@@ -80,25 +80,25 @@ const StyledRoot = styled(
     },
 
     _web: {
-      'cursor': 'pointer',
+      cursor: 'pointer',
       ':disabled': {
         cursor: 'not-allowed',
       },
     },
   },
-  { descendantStyle: ['_icon', '_text', '_indicator'] }
+  {descendantStyle: ['_icon', '_text', '_indicator']},
 );
 
 const StyledIndicator = styled(
   View,
   {
-    'justifyContent': 'center',
-    'alignItems': 'center',
-    'borderColor': '$border400',
-    'bg': '$transparent',
-    'borderRadius': 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '$border400',
+    bg: '$transparent',
+    borderRadius: 4,
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         outlineWidth: '2px',
         outlineColor: '$primary700',
@@ -112,25 +112,25 @@ const StyledIndicator = styled(
     },
 
     ':hover': {
-      'borderColor': '$border500',
-      'bg': 'transparent',
+      borderColor: '$border500',
+      bg: 'transparent',
       ':invalid': {
         borderColor: '$error700',
       },
       ':checked': {
-        'bg': '$primary700',
-        'borderColor': '$primary700',
+        bg: '$primary700',
+        borderColor: '$primary700',
         ':disabled': {
-          'borderColor': '$primary600',
-          'bg': '$primary600',
-          'opacity': 0.4,
+          borderColor: '$primary600',
+          bg: '$primary600',
+          opacity: 0.4,
           ':invalid': {
             borderColor: '$error700',
           },
         },
       },
       ':disabled': {
-        'borderColor': '$border400',
+        borderColor: '$border400',
         ':invalid': {
           borderColor: '$error700',
         },
@@ -152,17 +152,17 @@ const StyledIndicator = styled(
       opacity: 0.4,
     },
   },
-  { ancestorStyle: ['_indicator'] }
+  {ancestorStyle: ['_indicator']},
 );
 const StyledIcon = styled(
   Check,
   {
-    'color': '$background800',
+    color: '$background800',
 
     // defaultProps: {
     //   size: 'md',
     // },
-    'variants': {
+    variants: {
       size: {
         '2xs': {
           h: '$3',
@@ -172,7 +172,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -180,7 +180,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -188,7 +188,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -196,7 +196,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -204,7 +204,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -232,7 +232,7 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 const StyledText = styled(
   Text,
@@ -273,23 +273,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -336,21 +336,21 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledLabel = styled(
   StyledText,
   {
-    'color': '$text600',
+    color: '$text600',
 
     ':checked': {
       color: '$text900',
     },
 
     ':hover': {
-      'color': '$text900',
+      color: '$text900',
       ':checked': {
-        'color': '$text900',
+        color: '$text900',
         ':disabled': {
           color: '$text900',
         },
@@ -361,7 +361,7 @@ const StyledLabel = styled(
     },
 
     ':active': {
-      'color': '$text900',
+      color: '$text900',
 
       ':checked': {
         color: '$text900',
@@ -372,14 +372,14 @@ const StyledLabel = styled(
       opacity: 0.4,
     },
 
-    '_web': {
+    _web: {
       MozUserSelect: 'none',
       WebkitUserSelect: 'none',
       msUserSelect: 'none',
       userSelect: 'none',
     },
   },
-  { ancestorStyle: ['_text'] }
+  {ancestorStyle: ['_text']},
 );
 const StyledGroup = styled(View, {});
 

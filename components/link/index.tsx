@@ -1,12 +1,12 @@
-import { styled } from '@gluestack-style/react';
-import { createLink } from '@gluestack-ui/link';
-import { Pressable, Text } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {createLink} from '@gluestack-ui/link';
+import {Pressable, Text} from 'react-native';
 
 const StyledRoot = styled(
   Pressable,
   {
     _web: {
-      'outlineWidth': 0,
+      outlineWidth: 0,
       ':disabled': {
         cursor: 'not-allowed',
       },
@@ -33,7 +33,7 @@ const StyledRoot = styled(
   },
   {
     componentName: 'Link',
-  } as const
+  } as const,
 );
 
 const StyledText = styled(
@@ -75,23 +75,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -138,7 +138,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledLinkText = styled(
@@ -149,7 +149,7 @@ const StyledLinkText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  } as const
+  } as const,
 );
 
 export const Link = createLink({

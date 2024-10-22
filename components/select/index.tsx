@@ -1,13 +1,13 @@
-import { H1, H2, H3, H4, H5, H6 } from '@expo/html-elements';
+import {H1, H2, H3, H4, H5, H6} from '@expo/html-elements';
 import {
   AnimatePresence,
   AnimatedPressable,
   AnimatedView,
 } from '@gluestack-style/animation-resolver';
-import { styled, AsForwarder } from '@gluestack-style/react';
-import { createActionsheet } from '@gluestack-ui/actionsheet';
-import { createSelect } from '@gluestack-ui/select';
-import { TextInput } from 'react-native';
+import {styled, AsForwarder} from '@gluestack-style/react';
+import {createActionsheet} from '@gluestack-ui/actionsheet';
+import {createSelect} from '@gluestack-ui/select';
+import {TextInput} from 'react-native';
 import {
   Pressable,
   View,
@@ -51,17 +51,17 @@ const StyledContent = styled(
   },
   {
     descendantStyle: ['_sectionHeaderBackground'],
-  }
+  },
 );
 
 const StyledItem = styled(
   Pressable,
   {
-    'p': '$3',
-    'flexDirection': 'row',
-    'alignItems': 'center',
-    'rounded': '$sm',
-    'w': '$full',
+    p: '$3',
+    flexDirection: 'row',
+    alignItems: 'center',
+    rounded: '$sm',
+    w: '$full',
 
     ':disabled': {
       opacity: 0.4,
@@ -84,7 +84,7 @@ const StyledItem = styled(
       bg: '$background100',
     },
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         bg: '$background100',
       },
@@ -92,7 +92,7 @@ const StyledItem = styled(
   },
   {
     descendantStyle: ['_text', '_icon'],
-  }
+  },
 );
 const StyledText = styled(
   Text,
@@ -133,23 +133,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -196,7 +196,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledItemText = styled(
@@ -210,7 +210,7 @@ const StyledItemText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledDragIndicator = styled(View, {
@@ -239,14 +239,14 @@ const StyledBackdrop = styled(AnimatedPressable, {
     opacity: 0,
   },
 
-  'position': 'absolute',
-  'left': 0,
-  'top': 0,
-  'right': 0,
-  'bottom': 0,
-  'bg': '$background950',
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0,
+  bg: '$background950',
 
-  '_web': {
+  _web: {
     cursor: 'default',
     pointerEvents: 'auto',
   },
@@ -308,54 +308,54 @@ const StyledSectionHeaderText = styled(H4, {
     size: {
       '5xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$6xl',
       },
       '4xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$5xl',
       },
 
       '3xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$4xl',
       },
 
       '2xl': {
         //@ts-ignore
-        props: { as: H2 },
+        props: {as: H2},
         fontSize: '$3xl',
       },
 
-      'xl': {
+      xl: {
         //@ts-ignore
-        props: { as: H3 },
+        props: {as: H3},
         fontSize: '$2xl',
       },
 
-      'lg': {
+      lg: {
         //@ts-ignore
-        props: { as: H4 },
+        props: {as: H4},
         fontSize: '$xl',
       },
 
-      'md': {
+      md: {
         //@ts-ignore
-        props: { as: H5 },
+        props: {as: H5},
         fontSize: '$lg',
       },
 
-      'sm': {
+      sm: {
         //@ts-ignore
-        props: { as: H6 },
+        props: {as: H6},
         fontSize: '$md',
       },
 
-      'xs': {
+      xs: {
         //@ts-ignore
-        props: { as: H6 },
+        props: {as: H6},
         fontSize: '$sm',
       },
     },
@@ -376,7 +376,7 @@ const StyledSectionHeaderText = styled(H4, {
     },
   },
   color: '$text500',
-  props: { size: 'xs' },
+  props: {size: 'xs'},
   textTransform: 'uppercase',
   p: '$3',
 });
@@ -394,7 +394,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -402,7 +402,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -410,7 +410,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -418,7 +418,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -426,7 +426,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -453,7 +453,7 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 const StyledSelectRoot = styled(View, {});
@@ -461,12 +461,12 @@ const StyledSelectRoot = styled(View, {});
 const StyledSelectTrigger = styled(
   Pressable,
   {
-    'borderWidth': 1,
-    'borderColor': '$background300',
-    'borderRadius': '$sm',
-    'flexDirection': 'row',
-    'overflow': 'hidden',
-    'alignItems': 'center',
+    borderWidth: 1,
+    borderColor: '$background300',
+    borderRadius: '$sm',
+    flexDirection: 'row',
+    overflow: 'hidden',
+    alignItems: 'center',
 
     ':hover': {
       borderColor: '$border400',
@@ -477,22 +477,22 @@ const StyledSelectTrigger = styled(
     },
 
     ':disabled': {
-      'opacity': 0.4,
+      opacity: 0.4,
       ':hover': {
         borderColor: '$background300',
       },
     },
 
-    '_input': {
+    _input: {
       py: 'auto',
       px: '$3',
     },
 
-    '_icon': {
+    _icon: {
       color: '$background500',
     },
 
-    'variants': {
+    variants: {
       size: {
         xl: {
           h: '$12',
@@ -537,7 +537,7 @@ const StyledSelectTrigger = styled(
       },
       variant: {
         underlined: {
-          '_input': {
+          _input: {
             _web: {
               outlineWidth: 0,
               outline: 'none',
@@ -545,13 +545,13 @@ const StyledSelectTrigger = styled(
             px: '$0',
           },
 
-          'borderWidth': 0,
-          'borderRadius': 0,
-          'borderBottomWidth': '$1',
+          borderWidth: 0,
+          borderRadius: 0,
+          borderBottomWidth: '$1',
 
           ':focus': {
-            'borderColor': '$primary700',
-            '_web': {
+            borderColor: '$primary700',
+            _web: {
               boxShadow: 'inset 0 -1px 0 0 $primary700',
             },
             ':hover': {
@@ -563,16 +563,16 @@ const StyledSelectTrigger = styled(
           },
 
           ':invalid': {
-            'borderBottomWidth': 2,
-            'borderBottomColor': '$error700',
-            '_web': {
+            borderBottomWidth: 2,
+            borderBottomColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 -1px 0 0 $error700',
             },
             ':hover': {
               borderBottomColor: '$error700',
             },
             ':focus': {
-              'borderBottomColor': '$error700',
+              borderBottomColor: '$error700',
               ':hover': {
                 borderBottomColor: '$error700',
                 _web: {
@@ -591,7 +591,7 @@ const StyledSelectTrigger = styled(
           },
         },
         outline: {
-          '_input': {
+          _input: {
             _web: {
               outlineWidth: 0,
               outline: 'none',
@@ -599,8 +599,8 @@ const StyledSelectTrigger = styled(
           },
 
           ':focus': {
-            'borderColor': '$primary700',
-            '_web': {
+            borderColor: '$primary700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $primary700',
             },
             ':hover': {
@@ -612,15 +612,15 @@ const StyledSelectTrigger = styled(
           },
 
           ':invalid': {
-            'borderColor': '$error700',
-            '_web': {
+            borderColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $error700',
             },
             ':hover': {
               borderColor: '$error700',
             },
             ':focus': {
-              'borderColor': '$error700',
+              borderColor: '$error700',
               ':hover': {
                 borderColor: '$error700',
                 _web: {
@@ -639,9 +639,9 @@ const StyledSelectTrigger = styled(
           },
         },
         rounded: {
-          'borderRadius': 999,
+          borderRadius: 999,
 
-          '_input': {
+          _input: {
             px: '$4',
             _web: {
               outlineWidth: 0,
@@ -650,8 +650,8 @@ const StyledSelectTrigger = styled(
           },
 
           ':focus': {
-            'borderColor': '$primary700',
-            '_web': {
+            borderColor: '$primary700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $primary700',
             },
             ':hover': {
@@ -663,15 +663,15 @@ const StyledSelectTrigger = styled(
           },
 
           ':invalid': {
-            'borderColor': '$error700',
-            '_web': {
+            borderColor: '$error700',
+            _web: {
               boxShadow: 'inset 0 0 0 1px $error700',
             },
             ':hover': {
               borderColor: '$error700',
             },
             ':focus': {
-              'borderColor': '$error700',
+              borderColor: '$error700',
               ':hover': {
                 borderColor: '$error700',
                 _web: {
@@ -692,7 +692,7 @@ const StyledSelectTrigger = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       size: 'md',
       variant: 'outline',
     },
@@ -700,7 +700,7 @@ const StyledSelectTrigger = styled(
 
   {
     descendantStyle: ['_input', '_icon'],
-  }
+  },
 );
 
 const StyledSelectInput = styled(
@@ -727,7 +727,7 @@ const StyledSelectInput = styled(
     propertyTokenMap: {
       placeholderTextColor: 'colors',
     },
-  }
+  },
 );
 
 const Actionsheet = createActionsheet({
@@ -767,7 +767,7 @@ export const Select = createSelect(
     FlatList: Actionsheet.FlatList,
     SectionList: Actionsheet.SectionList,
     SectionHeaderText: Actionsheet.SectionHeaderText,
-  }
+  },
 );
 export const SelectTrigger = Select.Trigger;
 export const SelectInput = Select.Input;

@@ -1,8 +1,8 @@
-import { AnimatePresence } from '@gluestack-style/animation-resolver';
-import { createMenu } from '@gluestack-ui/menu';
-import { styled } from '@gluestack-style/react';
-import { AnimatedView } from '@gluestack-style/animation-resolver';
-import { Pressable, Text } from 'react-native';
+import {AnimatePresence} from '@gluestack-style/animation-resolver';
+import {createMenu} from '@gluestack-ui/menu';
+import {styled} from '@gluestack-style/react';
+import {AnimatedView} from '@gluestack-style/animation-resolver';
+import {Pressable, Text} from 'react-native';
 
 const StyledRoot = styled(
   AnimatedView,
@@ -30,33 +30,33 @@ const StyledRoot = styled(
       },
     },
 
-    'minWidth': 200,
-    'py': '$2',
-    'rounded': '$sm',
-    'bg': '$background0',
+    minWidth: 200,
+    py: '$2',
+    rounded: '$sm',
+    bg: '$background0',
 
-    'defaultProps': {
+    defaultProps: {
       softShadow: '3',
     },
   },
-  {}
+  {},
 );
 
 const StyledItem = styled(
   Pressable,
   {
-    'p': '$3',
-    'flexDirection': 'row',
-    'alignItems': 'center',
+    p: '$3',
+    flexDirection: 'row',
+    alignItems: 'center',
 
     ':hover': {
       bg: '$background100',
     },
 
     ':disabled': {
-      'opacity': 0.4,
+      opacity: 0.4,
 
-      '_web': {
+      _web: {
         cursor: 'not-allowed',
       },
 
@@ -84,11 +84,11 @@ const StyledItem = styled(
       outlineStyle: 'solid',
     },
 
-    '_web': {
+    _web: {
       cursor: 'pointer',
     },
   },
-  { descendantStyle: ['_text'] }
+  {descendantStyle: ['_text']},
 );
 
 const StyledBackdrop = styled(
@@ -106,7 +106,7 @@ const StyledBackdrop = styled(
       cursor: 'default',
     },
   },
-  {}
+  {},
 );
 
 const StyledText = styled(
@@ -148,23 +148,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -211,7 +211,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledLabel = styled(
   StyledText,
@@ -251,23 +251,23 @@ const StyledLabel = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -312,7 +312,7 @@ const StyledLabel = styled(
       size: 'md',
     },
   },
-  { ancestorStyle: ['_text'] }
+  {ancestorStyle: ['_text']},
 );
 export const Menu = createMenu({
   Root: StyledRoot,

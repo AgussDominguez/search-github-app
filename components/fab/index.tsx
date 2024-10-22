@@ -1,19 +1,19 @@
-import { AsForwarder, styled } from '@gluestack-style/react';
-import { createFab } from '@gluestack-ui/fab';
-import { Text } from 'react-native';
-import { Pressable } from 'react-native';
+import {AsForwarder, styled} from '@gluestack-style/react';
+import {createFab} from '@gluestack-ui/fab';
+import {Text} from 'react-native';
+import {Pressable} from 'react-native';
 
 const StyledRoot = styled(
   Pressable,
   {
-    'bg': '$primary500',
-    'rounded': '$full',
-    'zIndex': 20,
-    'p': 16,
-    'flexDirection': 'row',
-    'alignItems': 'center',
-    'justifyContent': 'center',
-    'position': 'absolute',
+    bg: '$primary500',
+    rounded: '$full',
+    zIndex: 20,
+    p: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
 
     ':hover': {
       bg: '$primary600',
@@ -32,13 +32,13 @@ const StyledRoot = styled(
       },
     },
 
-    '_text': {
+    _text: {
       color: '$text50',
       fontWeight: '$normal',
     },
 
-    '_icon': {
-      'color': '$text50',
+    _icon: {
+      color: '$text50',
 
       ':hover': {
         color: '$text0',
@@ -49,7 +49,7 @@ const StyledRoot = styled(
       },
     },
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         outlineWidth: 2,
         outlineColor: '$primary700',
@@ -57,7 +57,7 @@ const StyledRoot = styled(
       },
     },
 
-    'variants': {
+    variants: {
       size: {
         sm: {
           px: '$2.5',
@@ -146,7 +146,7 @@ const StyledRoot = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       placement: 'bottom right',
       size: 'md',
       hardShadow: '2',
@@ -154,7 +154,7 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_text', '_icon'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -196,23 +196,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -259,7 +259,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledLabel = styled(
   StyledText,
@@ -298,23 +298,23 @@ const StyledLabel = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -362,7 +362,7 @@ const StyledLabel = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledIcon = styled(
@@ -378,7 +378,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -386,7 +386,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -394,7 +394,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -402,7 +402,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -410,7 +410,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -428,7 +428,7 @@ const StyledIcon = styled(
   },
   {
     ancestorStyle: ['_icon'],
-  }
+  },
 );
 
 export const Fab = createFab({

@@ -1,6 +1,6 @@
-import { ActivityIndicator } from 'react-native';
-import { styled } from '@gluestack-style/react';
-import { createSpinner } from '@gluestack-ui/spinner';
+import {ActivityIndicator} from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {createSpinner} from '@gluestack-ui/spinner';
 
 const StyledRoot = styled(
   ActivityIndicator,
@@ -17,7 +17,7 @@ const StyledRoot = styled(
       // @ts-ignore
       size: 'size',
     },
-  }
+  },
 );
 
-export const Spinner = createSpinner({ Root: StyledRoot });
+export const Spinner = createSpinner({Root: StyledRoot});

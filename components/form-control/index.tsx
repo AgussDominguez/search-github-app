@@ -1,9 +1,9 @@
-import { Text, View } from 'react-native';
+import {Text, View} from 'react-native';
 
-import { styled } from '@gluestack-style/react';
+import {styled} from '@gluestack-style/react';
 
-import { createFormControl } from '@gluestack-ui/form-control';
-import { AsForwarder } from '@gluestack-style/react';
+import {createFormControl} from '@gluestack-ui/form-control';
+import {AsForwarder} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   View,
@@ -13,44 +13,44 @@ const StyledRoot = styled(
       size: {
         sm: {
           _labelText: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
           _labelAstrick: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
           _helperText: {
-            props: { size: 'xs' },
+            props: {size: 'xs'},
           },
           _errorText: {
-            props: { size: 'xs' },
+            props: {size: 'xs'},
           },
         },
         md: {
           _labelText: {
-            props: { size: 'md' },
+            props: {size: 'md'},
           },
           _labelAstrick: {
-            props: { size: 'md' },
+            props: {size: 'md'},
           },
           _helperText: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
           _errorText: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
         },
         lg: {
           _labelText: {
-            props: { size: 'lg' },
+            props: {size: 'lg'},
           },
           _labelAstrick: {
-            props: { size: 'lg' },
+            props: {size: 'lg'},
           },
           _helperText: {
-            props: { size: 'md' },
+            props: {size: 'md'},
           },
           _errorText: {
-            props: { size: 'md' },
+            props: {size: 'md'},
           },
         },
       },
@@ -67,7 +67,7 @@ const StyledRoot = styled(
       '_errorText',
       '_labelAstrick',
     ],
-  }
+  },
 );
 
 const StyledErrorIcon = styled(
@@ -86,7 +86,7 @@ const StyledErrorIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -94,7 +94,7 @@ const StyledErrorIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -102,7 +102,7 @@ const StyledErrorIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -110,7 +110,7 @@ const StyledErrorIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -118,7 +118,7 @@ const StyledErrorIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -140,7 +140,7 @@ const StyledErrorIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 const StyledFormControlError = styled(View, {
@@ -190,23 +190,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -253,7 +253,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledFormControlErrorText = styled(
@@ -261,7 +261,7 @@ const StyledFormControlErrorText = styled(
   {
     color: '$error700',
   },
-  { ancestorStyle: ['_errorText'] }
+  {ancestorStyle: ['_errorText']},
 );
 
 const StyledFormControlHelper = styled(View, {
@@ -280,7 +280,7 @@ const StyledFormControlHelperText = styled(
 
     color: '$text500',
   },
-  { ancestorStyle: ['_helperText'] }
+  {ancestorStyle: ['_helperText']},
 );
 
 const StyledFormControlLabel = styled(
@@ -291,7 +291,7 @@ const StyledFormControlLabel = styled(
     alignItems: 'center',
     mb: '$1',
   },
-  { descendantStyle: ['_labelText'] }
+  {descendantStyle: ['_labelText']},
 );
 
 const StyledFormControlLabelText = styled(StyledText, {

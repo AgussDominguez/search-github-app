@@ -1,8 +1,8 @@
-import { createAccordion } from '@gluestack-ui/accordion';
-import { AsForwarder, styled } from '@gluestack-style/react';
-import { View, Pressable, Text, Platform } from 'react-native';
+import {createAccordion} from '@gluestack-ui/accordion';
+import {AsForwarder, styled} from '@gluestack-style/react';
+import {View, Pressable, Text, Platform} from 'react-native';
 
-import { H3 } from '@expo/html-elements';
+import {H3} from '@expo/html-elements';
 
 const StyleRoot = styled(
   View,
@@ -110,9 +110,9 @@ const StyleRoot = styled(
       '_icon',
       '_contentText',
     ],
-  }
+  },
 );
-const StyledItem = styled(View, {}, { ancestorStyle: ['_item'] });
+const StyledItem = styled(View, {}, {ancestorStyle: ['_item']});
 // @ts-ignore
 const StyledHeader = styled(Platform.OS === 'web' ? H3 : View, {
   mx: '$0',
@@ -121,13 +121,13 @@ const StyledHeader = styled(Platform.OS === 'web' ? H3 : View, {
 const StyledTrigger = styled(
   Pressable,
   {
-    'width': '$full',
-    'py': '$5',
-    'px': '$5',
-    'flexDirection': 'row',
-    'justifyContent': 'space-between',
-    'alignItems': 'center',
-    '_web': {
+    width: '$full',
+    py: '$5',
+    px: '$5',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    _web: {
       outlineWidth: 0,
     },
     ':disabled': {
@@ -143,7 +143,7 @@ const StyledTrigger = styled(
   {
     descendantStyle: ['_icon', '_titleText', '_contentText'],
     ancestorStyle: ['_button'],
-  }
+  },
 );
 const StyledText = styled(
   Text,
@@ -184,23 +184,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -247,15 +247,15 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledTitleText = styled(
   StyledText,
-  { flex: 1, textAlign: 'left' },
-  { ancestorStyle: ['_titleText'] }
+  {flex: 1, textAlign: 'left'},
+  {ancestorStyle: ['_titleText']},
 );
-const StyledContentText = styled(Text, {}, { ancestorStyle: ['_contentText'] });
+const StyledContentText = styled(Text, {}, {ancestorStyle: ['_contentText']});
 const StyledIcon = styled(
   AsForwarder,
   {
@@ -274,7 +274,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -282,7 +282,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -290,7 +290,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -298,7 +298,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -306,7 +306,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -330,9 +330,9 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
-const StyledContent = styled(View, { px: '$5', mt: '$2', pb: '$5' });
+const StyledContent = styled(View, {px: '$5', mt: '$2', pb: '$5'});
 
 export const Accordion = createAccordion({
   Root: StyleRoot,

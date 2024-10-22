@@ -1,6 +1,6 @@
-import { ScrollView as RNScrollView } from 'react-native';
+import {ScrollView as RNScrollView} from 'react-native';
 
-import { styled, useStyled, propertyTokenMap } from '@gluestack-style/react';
+import {styled, useStyled, propertyTokenMap} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   RNScrollView,
@@ -19,7 +19,7 @@ const StyledRoot = styled(
             newValue[`${aliases[key]}`] = resolver(
               value,
               //@ts-ignore
-              propertyTokenMap[aliases[key]]
+              propertyTokenMap[aliases[key]],
             );
           } else {
             //@ts-ignore
@@ -30,7 +30,7 @@ const StyledRoot = styled(
         return rawValue;
       },
     },
-  }
+  },
 );
 
 export const ScrollView = StyledRoot;

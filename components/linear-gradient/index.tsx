@@ -1,5 +1,5 @@
-import { styled } from '@gluestack-style/react';
-import { View } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {View} from 'react-native';
 
 export const LinearGradient = styled(
   View,
@@ -20,5 +20,5 @@ export const LinearGradient = styled(
         return rawValue;
       },
     },
-  }
+  },
 );

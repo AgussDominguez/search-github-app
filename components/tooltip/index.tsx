@@ -1,10 +1,10 @@
-import { createTooltip } from '@gluestack-ui/tooltip';
+import {createTooltip} from '@gluestack-ui/tooltip';
 import {
   AnimatePresence,
   AnimatedView,
 } from '@gluestack-style/animation-resolver';
-import { styled } from '@gluestack-style/react';
-import { View, Text } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {View, Text} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -15,7 +15,7 @@ const StyledRoot = styled(
       pointerEvents: 'none',
     },
   },
-  {}
+  {},
 );
 
 const StyledContent = styled(
@@ -47,27 +47,27 @@ const StyledContent = styled(
       },
     },
 
-    'py': '$1',
-    'px': '$3',
-    'borderRadius': '$sm',
-    'bg': '$background900',
+    py: '$1',
+    px: '$3',
+    borderRadius: '$sm',
+    bg: '$background900',
 
-    '_text': {
+    _text: {
       fontSize: '$xs',
       color: '$text50',
     },
 
-    '_web': {
+    _web: {
       pointerEvents: 'auto',
     },
 
-    'defaultProps': {
+    defaultProps: {
       hardShadow: '2',
     },
   },
   {
     descendantStyle: ['_text'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -109,23 +109,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -172,7 +172,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledTooltipText = styled(
   StyledText,
@@ -210,23 +210,23 @@ const StyledTooltipText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -278,7 +278,7 @@ const StyledTooltipText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 export const Tooltip = createTooltip({

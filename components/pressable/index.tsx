@@ -1,5 +1,5 @@
-import { styled } from '@gluestack-style/react';
-import { Pressable as RNPressable } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {Pressable as RNPressable} from 'react-native';
 
 export const Pressable = styled(RNPressable, {
   _web: {

@@ -1,7 +1,7 @@
-import { styled } from '@gluestack-style/react';
-import { createSlider } from '@gluestack-ui/slider';
-import { Pressable } from 'react-native';
-import { View } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {createSlider} from '@gluestack-ui/slider';
+import {Pressable} from 'react-native';
+import {View} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -197,15 +197,15 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_thumb', '_track', '_filledTrack'],
-  }
+  },
 );
 
 const StyledThumb = styled(
   View,
   {
-    'bg': '$primary500',
-    'position': 'absolute',
-    'borderRadius': '$full',
+    bg: '$primary500',
+    position: 'absolute',
+    borderRadius: '$full',
 
     ':focus': {
       bg: '$primary600',
@@ -223,9 +223,9 @@ const StyledThumb = styled(
       bg: '$primary500',
     },
 
-    '_web': {
+    _web: {
       //@ts-ignore
-      'cursor': 'pointer',
+      cursor: 'pointer',
       ':active': {
         outlineWidth: 4,
         outlineStyle: 'solid',
@@ -238,13 +238,13 @@ const StyledThumb = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       hardShadow: '1',
     },
   },
   {
     ancestorStyle: ['_thumb'],
-  }
+  },
 );
 
 const StyledTrack = styled(
@@ -268,13 +268,13 @@ const StyledTrack = styled(
   },
   {
     ancestorStyle: ['_track'],
-  }
+  },
 );
 
 const StyledFilledTrack = styled(
   View,
   {
-    'bg': '$primary500',
+    bg: '$primary500',
 
     ':focus': {
       bg: '$primary600',
@@ -290,7 +290,7 @@ const StyledFilledTrack = styled(
   },
   {
     ancestorStyle: ['_filledTrack'],
-  }
+  },
 );
 
 const StyledThumbInteraction = styled(View, {

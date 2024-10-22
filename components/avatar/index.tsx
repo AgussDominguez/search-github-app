@@ -1,7 +1,7 @@
-import { createAvatar } from '@gluestack-ui/avatar';
+import {createAvatar} from '@gluestack-ui/avatar';
 
-import { styled } from '@gluestack-style/react';
-import { View, Text, Image } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {View, Text, Image} from 'react-native';
 const StyledRoot = styled(
   View,
   {
@@ -12,7 +12,7 @@ const StyledRoot = styled(
     bg: '$primary600',
     variants: {
       size: {
-        'xs': {
+        xs: {
           w: '$6',
           h: '$6',
 
@@ -26,11 +26,11 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: '2xs' },
+            props: {size: '2xs'},
           },
         },
 
-        'sm': {
+        sm: {
           w: '$8',
           h: '$8',
 
@@ -44,11 +44,11 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: 'xs' },
+            props: {size: 'xs'},
           },
         },
 
-        'md': {
+        md: {
           w: '$12',
           h: '$12',
 
@@ -62,11 +62,11 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: 'md' },
+            props: {size: 'md'},
           },
         },
 
-        'lg': {
+        lg: {
           w: '$16',
           h: '$16',
 
@@ -80,11 +80,11 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: 'xl' },
+            props: {size: 'xl'},
           },
         },
 
-        'xl': {
+        xl: {
           w: '$24',
           h: '$24',
 
@@ -98,7 +98,7 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: '3xl' },
+            props: {size: '3xl'},
           },
         },
 
@@ -116,7 +116,7 @@ const StyledRoot = styled(
           },
 
           _text: {
-            props: { size: '5xl' },
+            props: {size: '5xl'},
           },
         },
       },
@@ -128,7 +128,7 @@ const StyledRoot = styled(
   {
     descendantStyle: ['_badge', '_text', '_image'],
     ancestorStyle: ['_avatar'],
-  }
+  },
 );
 
 const StyledBadge = styled(
@@ -146,7 +146,7 @@ const StyledBadge = styled(
   },
   {
     ancestorStyle: ['_badge'],
-  }
+  },
 );
 const StyledGroup = styled(
   View,
@@ -159,15 +159,15 @@ const StyledGroup = styled(
   },
   {
     descendantStyle: ['_avatar'],
-  }
+  },
 );
 
 const StyledImage = styled(
   Image,
-  { w: '$full', h: '$full', borderRadius: '$full', position: 'absolute' },
+  {w: '$full', h: '$full', borderRadius: '$full', position: 'absolute'},
   {
     ancestorStyle: ['_image'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -209,23 +209,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -272,7 +272,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 const StyledFallbackText = styled(
   StyledText,
@@ -290,7 +290,7 @@ const StyledFallbackText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  } as const
+  } as const,
 );
 
 const AccessbileAvatar = createAvatar({

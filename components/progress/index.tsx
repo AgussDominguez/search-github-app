@@ -1,6 +1,6 @@
-import { styled } from '@gluestack-style/react';
-import { createProgress } from '@gluestack-ui/progress';
-import { View } from 'react-native';
+import {styled} from '@gluestack-style/react';
+import {createProgress} from '@gluestack-ui/progress';
+import {View} from 'react-native';
 const StyledRoot = styled(
   View,
   {
@@ -10,31 +10,31 @@ const StyledRoot = styled(
 
     variants: {
       size: {
-        'xs': {
+        xs: {
           h: '$1',
           _filledTrack: {
             h: '$1',
           },
         },
-        'sm': {
+        sm: {
           h: '$2',
           _filledTrack: {
             h: '$2',
           },
         },
-        'md': {
+        md: {
           h: '$3',
           _filledTrack: {
             h: '$3',
           },
         },
-        'lg': {
+        lg: {
           h: '$4',
           _filledTrack: {
             h: '$4',
           },
         },
-        'xl': {
+        xl: {
           h: '$5',
           _filledTrack: {
             h: '$5',
@@ -55,7 +55,7 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_filledTrack'],
-  }
+  },
 );
 
 const StyledFilledTrack = styled(
@@ -66,7 +66,7 @@ const StyledFilledTrack = styled(
   },
   {
     ancestorStyle: ['_filledTrack'],
-  }
+  },
 );
 
 export const Progress = createProgress({

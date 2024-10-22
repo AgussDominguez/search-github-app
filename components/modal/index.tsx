@@ -1,12 +1,12 @@
-import { createModal } from '@gluestack-ui/modal';
+import {createModal} from '@gluestack-ui/modal';
 import {
   AnimatePresence,
   AnimatedPressable,
   AnimatedView,
 } from '@gluestack-style/animation-resolver';
-import { Pressable, View, ScrollView } from 'react-native';
+import {Pressable, View, ScrollView} from 'react-native';
 
-import { styled } from '@gluestack-style/react';
+import {styled} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   View,
@@ -17,15 +17,15 @@ const StyledRoot = styled(
     alignItems: 'center',
     variants: {
       size: {
-        xs: { _content: { width: '60%', maxWidth: 360 } },
-        sm: { _content: { width: '70%', maxWidth: 420 } },
-        md: { _content: { width: '80%', maxWidth: 510 } },
-        lg: { _content: { width: '90%', maxWidth: 640 } },
-        full: { _content: { width: '100%' } },
+        xs: {_content: {width: '60%', maxWidth: 360}},
+        sm: {_content: {width: '70%', maxWidth: 420}},
+        md: {_content: {width: '80%', maxWidth: 510}},
+        lg: {_content: {width: '90%', maxWidth: 640}},
+        full: {_content: {width: '100%'}},
       },
     },
 
-    defaultProps: { size: 'md' },
+    defaultProps: {size: 'md'},
 
     _web: {
       pointerEvents: 'box-none',
@@ -33,7 +33,7 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_content'],
-  }
+  },
 );
 const StyledBackdrop = styled(
   AnimatedPressable,
@@ -61,26 +61,26 @@ const StyledBackdrop = styled(
       },
     },
 
-    'position': 'absolute',
-    'left': 0,
-    'top': 0,
-    'right': 0,
-    'bottom': 0,
-    'bg': '$background950',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    bg: '$background950',
 
     // @ts-ignore
-    '_web': {
+    _web: {
       cursor: 'default',
     },
   },
-  {}
+  {},
 );
 const StyledContent = styled(
   AnimatedView,
   {
-    'bg': '$background50',
-    'rounded': '$lg',
-    'overflow': 'hidden',
+    bg: '$background50',
+    rounded: '$lg',
+    overflow: 'hidden',
 
     ':initial': {
       opacity: 0,
@@ -107,29 +107,29 @@ const StyledContent = styled(
       },
     },
 
-    'defaultProps': {
+    defaultProps: {
       softShadow: '3',
     },
   },
-  { ancestorStyle: ['_content'] }
+  {ancestorStyle: ['_content']},
 );
 const StyledBody = styled(
   ScrollView,
-  { px: '$4', paddingTop: 0, paddingBottom: '$2' },
-  {}
+  {px: '$4', paddingTop: 0, paddingBottom: '$2'},
+  {},
 );
 const StyledCloseButton = styled(
   Pressable,
   {
-    'zIndex': 1,
-    'p': '$2',
-    'rounded': '$sm',
+    zIndex: 1,
+    p: '$2',
+    rounded: '$sm',
 
-    '_icon': {
+    _icon: {
       color: '$background400',
     },
 
-    '_text': {
+    _text: {
       color: '$background400',
     },
 
@@ -163,12 +163,12 @@ const StyledCloseButton = styled(
       },
     },
 
-    '_web': {
+    _web: {
       outlineWidth: 0,
       cursor: 'pointer',
     },
   },
-  { descendantStyle: ['_icon', '_text'] }
+  {descendantStyle: ['_icon', '_text']},
 );
 const StyledFooter = styled(
   View,
@@ -179,7 +179,7 @@ const StyledFooter = styled(
     alignItems: 'center',
     flexWrap: 'wrap',
   },
-  {}
+  {},
 );
 const StyledHeader = styled(
   View,
@@ -191,7 +191,7 @@ const StyledHeader = styled(
     alignItems: 'center',
     flexDirection: 'row',
   },
-  {}
+  {},
 );
 
 const UIModal = createModal({

@@ -1,11 +1,11 @@
-import { H1, H2, H3, H4, H5, H6 } from '@expo/html-elements';
+import {H1, H2, H3, H4, H5, H6} from '@expo/html-elements';
 import {
   AnimatePresence,
   AnimatedPressable,
   AnimatedView,
 } from '@gluestack-style/animation-resolver';
-import { styled, AsForwarder } from '@gluestack-style/react';
-import { createActionsheet } from '@gluestack-ui/actionsheet';
+import {styled, AsForwarder} from '@gluestack-style/react';
+import {createActionsheet} from '@gluestack-ui/actionsheet';
 import {
   Pressable,
   View,
@@ -49,17 +49,17 @@ const StyledContent = styled(
   },
   {
     descendantStyle: ['_sectionHeaderBackground'],
-  }
+  },
 );
 
 const StyledItem = styled(
   Pressable,
   {
-    'p': '$3',
-    'flexDirection': 'row',
-    'alignItems': 'center',
-    'rounded': '$sm',
-    'w': '$full',
+    p: '$3',
+    flexDirection: 'row',
+    alignItems: 'center',
+    rounded: '$sm',
+    w: '$full',
 
     ':disabled': {
       opacity: 0.4,
@@ -82,7 +82,7 @@ const StyledItem = styled(
       bg: '$background100',
     },
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         bg: '$background100',
       },
@@ -90,7 +90,7 @@ const StyledItem = styled(
   },
   {
     descendantStyle: ['_text', '_icon'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -132,23 +132,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -195,7 +195,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledItemText = styled(
@@ -235,23 +235,23 @@ const StyledItemText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -303,7 +303,7 @@ const StyledItemText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledDragIndicator = styled(View, {
@@ -332,14 +332,14 @@ const StyledBackdrop = styled(AnimatedPressable, {
     opacity: 0,
   },
 
-  'position': 'absolute',
-  'left': 0,
-  'top': 0,
-  'right': 0,
-  'bottom': 0,
-  'bg': '$background950',
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0,
+  bg: '$background950',
 
-  '_web': {
+  _web: {
     cursor: 'default',
     pointerEvents: 'auto',
   },
@@ -401,54 +401,54 @@ const StyledSectionHeaderText = styled(H4, {
     size: {
       '5xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$6xl',
       },
       '4xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$5xl',
       },
 
       '3xl': {
         //@ts-ignore
-        props: { as: H1 },
+        props: {as: H1},
         fontSize: '$4xl',
       },
 
       '2xl': {
         //@ts-ignore
-        props: { as: H2 },
+        props: {as: H2},
         fontSize: '$3xl',
       },
 
-      'xl': {
+      xl: {
         //@ts-ignore
-        props: { as: H3 },
+        props: {as: H3},
         fontSize: '$2xl',
       },
 
-      'lg': {
+      lg: {
         //@ts-ignore
-        props: { as: H4 },
+        props: {as: H4},
         fontSize: '$xl',
       },
 
-      'md': {
+      md: {
         //@ts-ignore
-        props: { as: H5 },
+        props: {as: H5},
         fontSize: '$lg',
       },
 
-      'sm': {
+      sm: {
         //@ts-ignore
-        props: { as: H6 },
+        props: {as: H6},
         fontSize: '$md',
       },
 
-      'xs': {
+      xs: {
         //@ts-ignore
-        props: { as: H6 },
+        props: {as: H6},
         fontSize: '$sm',
       },
     },
@@ -469,7 +469,7 @@ const StyledSectionHeaderText = styled(H4, {
     },
   },
   color: '$text500',
-  props: { size: 'xs' },
+  props: {size: 'xs'},
   textTransform: 'uppercase',
   p: '$3',
 });
@@ -487,7 +487,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -495,7 +495,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -503,7 +503,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -511,7 +511,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -519,7 +519,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -544,7 +544,7 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 export const Actionsheet = createActionsheet({

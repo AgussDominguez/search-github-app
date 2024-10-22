@@ -1,6 +1,6 @@
-import { AsForwarder, styled } from '@gluestack-style/react';
-import { createAlert } from '@gluestack-ui/alert';
-import { View, Text } from 'react-native';
+import {AsForwarder, styled} from '@gluestack-style/react';
+import {createAlert} from '@gluestack-ui/alert';
+import {View, Text} from 'react-native';
 
 const StyledRoot = styled(
   View,
@@ -72,7 +72,7 @@ const StyledRoot = styled(
   },
   {
     descendantStyle: ['_icon', '_text'],
-  }
+  },
 );
 
 const StyledText = styled(
@@ -114,23 +114,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -177,7 +177,7 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledIcon = styled(
@@ -193,7 +193,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -201,7 +201,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -209,7 +209,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -217,7 +217,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -225,7 +225,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -243,7 +243,7 @@ const StyledIcon = styled(
   },
   {
     ancestorStyle: ['_icon'],
-  }
+  },
 );
 
 export const Alert = createAlert({

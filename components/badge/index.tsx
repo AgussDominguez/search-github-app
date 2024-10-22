@@ -1,13 +1,13 @@
-import { AsForwarder, styled } from '@gluestack-style/react';
-import { Text, View } from 'react-native';
+import {AsForwarder, styled} from '@gluestack-style/react';
+import {Text, View} from 'react-native';
 
 const StyledRoot = styled(
   View,
   {
-    'flexDirection': 'row',
-    'alignItems': 'center',
-    'borderRadius': '$xs',
-    'variants': {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: '$xs',
+    variants: {
       action: {
         error: {
           bg: '$backgroundError',
@@ -108,10 +108,10 @@ const StyledRoot = styled(
         lg: {
           px: '$2',
           _icon: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
           _text: {
-            props: { size: 'sm' },
+            props: {size: 'sm'},
           },
         },
       },
@@ -120,7 +120,7 @@ const StyledRoot = styled(
     ':disabled': {
       opacity: 0.5,
     },
-    'defaultProps': {
+    defaultProps: {
       action: 'info',
       variant: 'solid',
       size: 'md',
@@ -129,7 +129,7 @@ const StyledRoot = styled(
   {
     componentName: 'Badge',
     descendantStyle: ['_text', '_icon'],
-  } as const
+  } as const,
 );
 
 const StyledText = styled(
@@ -170,23 +170,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -235,7 +235,7 @@ const StyledText = styled(
   {
     componentName: 'BadgeText',
     ancestorStyle: ['_text'],
-  } as const
+  } as const,
 );
 
 const StyledIcon = styled(
@@ -251,7 +251,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -259,7 +259,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -267,7 +267,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -275,7 +275,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -283,7 +283,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -311,9 +311,9 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 const Badge = StyledRoot;
 
-export { Badge, StyledIcon as BadgeIcon, StyledText as BadgeText };
+export {Badge, StyledIcon as BadgeIcon, StyledText as BadgeText};

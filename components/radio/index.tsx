@@ -1,6 +1,6 @@
-import { createRadio } from '@gluestack-ui/radio';
-import { Pressable, View, Platform, Text } from 'react-native';
-import { styled, AsForwarder } from '@gluestack-style/react';
+import {createRadio} from '@gluestack-ui/radio';
+import {Pressable, View, Platform, Text} from 'react-native';
+import {styled, AsForwarder} from '@gluestack-style/react';
 
 const StyledRoot = styled(
   // @ts-ignore
@@ -70,7 +70,7 @@ const StyledRoot = styled(
       size: 'md',
     },
     _web: {
-      'cursor': 'pointer',
+      cursor: 'pointer',
       ':disabled': {
         cursor: 'not-allowed',
       },
@@ -79,20 +79,20 @@ const StyledRoot = styled(
   {
     descendantStyle: ['_icon', '_text', '_indicator'],
     ancestorStyle: ['_radio'],
-  }
+  },
 );
 
-const StyledGroup = styled(View, {}, { descendantStyle: ['_radio'] });
+const StyledGroup = styled(View, {}, {descendantStyle: ['_radio']});
 
 const StyledIcon = styled(
   AsForwarder,
   {
-    'color': '$background800',
+    color: '$background800',
 
     // defaultProps: {
     //   size: 'md',
     // },
-    'variants': {
+    variants: {
       size: {
         '2xs': {
           h: '$3',
@@ -102,7 +102,7 @@ const StyledIcon = styled(
             size: 12,
           },
         },
-        'xs': {
+        xs: {
           h: '$3.5',
           w: '$3.5',
           props: {
@@ -110,7 +110,7 @@ const StyledIcon = styled(
             size: 14,
           },
         },
-        'sm': {
+        sm: {
           h: '$4',
           w: '$4',
           props: {
@@ -118,7 +118,7 @@ const StyledIcon = styled(
             size: 16,
           },
         },
-        'md': {
+        md: {
           h: '$4.5',
           w: '$4.5',
           props: {
@@ -126,7 +126,7 @@ const StyledIcon = styled(
             size: 18,
           },
         },
-        'lg': {
+        lg: {
           h: '$5',
           w: '$5',
           props: {
@@ -134,7 +134,7 @@ const StyledIcon = styled(
             size: 20,
           },
         },
-        'xl': {
+        xl: {
           h: '$6',
           w: '$6',
           props: {
@@ -144,12 +144,12 @@ const StyledIcon = styled(
         },
       },
     },
-    'borderRadius': '$full',
+    borderRadius: '$full',
 
     ':checked': {
-      'color': '$primary600',
+      color: '$primary600',
       ':hover': {
-        'color': '$primary700',
+        color: '$primary700',
         ':disabled': {
           color: '$primary600',
         },
@@ -165,20 +165,20 @@ const StyledIcon = styled(
       stroke: 'colors',
       fill: 'colors',
     },
-  }
+  },
 );
 
 const StyledIndicator = styled(
   View,
   {
-    'justifyContent': 'center',
-    'alignItems': 'center',
-    'bg': 'transparent',
-    'borderColor': '$border400',
-    'borderWidth': 2,
-    'borderRadius': 999,
+    justifyContent: 'center',
+    alignItems: 'center',
+    bg: 'transparent',
+    borderColor: '$border400',
+    borderWidth: 2,
+    borderRadius: 999,
 
-    '_web': {
+    _web: {
       ':focusVisible': {
         outlineWidth: 2,
         outlineColor: '$primary700',
@@ -192,8 +192,8 @@ const StyledIndicator = styled(
     },
 
     ':hover': {
-      'borderColor': '$border500',
-      'bg': 'transparent',
+      borderColor: '$border500',
+      bg: 'transparent',
 
       ':checked': {
         bg: 'transparent',
@@ -207,8 +207,8 @@ const StyledIndicator = styled(
           borderColor: '$error400',
           opacity: 0.4,
         },
-        'borderColor': '$border400',
-        'opacity': 0.4,
+        borderColor: '$border400',
+        opacity: 0.4,
       },
     },
 
@@ -222,7 +222,7 @@ const StyledIndicator = styled(
     },
 
     ':disabled': {
-      'opacity': 0.4,
+      opacity: 0.4,
       ':checked': {
         borderColor: '$border400',
         bg: 'transparent',
@@ -232,7 +232,7 @@ const StyledIndicator = styled(
       },
     },
   },
-  { ancestorStyle: ['_indicator'] }
+  {ancestorStyle: ['_indicator']},
 );
 
 const StyledText = styled(
@@ -274,23 +274,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -337,25 +337,25 @@ const StyledText = styled(
   },
   {
     ancestorStyle: ['_text'],
-  }
+  },
 );
 
 const StyledLabel = styled(
   StyledText,
   {
-    'color': '$text600',
+    color: '$text600',
 
     ':checked': {
       color: '$text900',
     },
 
     ':hover': {
-      'color': '$text900',
+      color: '$text900',
       ':checked': {
         color: '$text900',
       },
       ':disabled': {
-        'color': '$text600',
+        color: '$text600',
         ':checked': {
           color: '$text900',
         },
@@ -363,7 +363,7 @@ const StyledLabel = styled(
     },
 
     ':active': {
-      'color': '$text900',
+      color: '$text900',
       ':checked': {
         color: '$text900',
       },
@@ -373,14 +373,14 @@ const StyledLabel = styled(
       opacity: 0.4,
     },
 
-    '_web': {
+    _web: {
       MozUserSelect: 'none',
       WebkitUserSelect: 'none',
       msUserSelect: 'none',
       userSelect: 'none',
     },
   },
-  { ancestorStyle: ['_text'] }
+  {ancestorStyle: ['_text']},
 );
 
 export const Radio = createRadio({

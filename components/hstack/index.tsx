@@ -1,24 +1,24 @@
-import { View } from 'react-native';
+import {View} from 'react-native';
 
-import { styled } from '@gluestack-style/react';
+import {styled} from '@gluestack-style/react';
 
 const StyledRoot = styled(View, {
   flexDirection: 'row',
   variants: {
     space: {
-      'xs': {
+      xs: {
         gap: `$1`,
       },
-      'sm': {
+      sm: {
         gap: `$2`,
       },
-      'md': {
+      md: {
         gap: `$3`,
       },
-      'lg': {
+      lg: {
         gap: `$4`,
       },
-      'xl': {
+      xl: {
         gap: `$5`,
       },
       '2xl': {

@@ -1,5 +1,5 @@
-import { Text as RNText } from 'react-native';
-import { styled } from '@gluestack-style/react';
+import {Text as RNText} from 'react-native';
+import {styled} from '@gluestack-style/react';
 
 const StyledText = styled(
   RNText,
@@ -39,23 +39,23 @@ const StyledText = styled(
         '2xs': {
           fontSize: '$2xs',
         },
-        'xs': {
+        xs: {
           fontSize: '$xs',
         },
 
-        'sm': {
+        sm: {
           fontSize: '$sm',
         },
 
-        'md': {
+        md: {
           fontSize: '$md',
         },
 
-        'lg': {
+        lg: {
           fontSize: '$lg',
         },
 
-        'xl': {
+        xl: {
           fontSize: '$xl',
         },
 
@@ -100,7 +100,7 @@ const StyledText = styled(
       size: 'md',
     },
   },
-  {}
+  {},
 );
 
 export const Text = StyledText;

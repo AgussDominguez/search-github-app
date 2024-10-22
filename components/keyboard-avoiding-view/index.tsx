@@ -1,5 +1,5 @@
-import { styled, useStyled } from '@gluestack-style/react';
-import { KeyboardAvoidingView as RNKeyboardAvoidingView } from 'react-native';
+import {styled, useStyled} from '@gluestack-style/react';
+import {KeyboardAvoidingView as RNKeyboardAvoidingView} from 'react-native';
 
 export const KeyboardAvoidingView = styled(
   RNKeyboardAvoidingView,
@@ -19,7 +19,7 @@ export const KeyboardAvoidingView = styled(
             newValue[`${aliases[key]}`] = resolver(
               value,
               //@ts-ignore
-              propertyTokenMap[aliases[key]]
+              propertyTokenMap[aliases[key]],
             );
           } else {
             //@ts-ignore
@@ -30,5 +30,5 @@ export const KeyboardAvoidingView = styled(
         return rawValue;
       },
     },
-  }
+  },
 );

@@ -1,5 +1,5 @@
-import { FlatList as RNFlatList } from 'react-native';
-import { styled, useStyled, propertyTokenMap } from '@gluestack-style/react';
+import {FlatList as RNFlatList} from 'react-native';
+import {styled, useStyled, propertyTokenMap} from '@gluestack-style/react';
 
 export const FlatList = styled(
   RNFlatList,
@@ -19,7 +19,7 @@ export const FlatList = styled(
             newValue[`${aliases[key]}`] = resolver(
               value,
               //@ts-ignore
-              propertyTokenMap[aliases[key]]
+              propertyTokenMap[aliases[key]],
             );
           } else {
             //@ts-ignore
@@ -30,5 +30,5 @@ export const FlatList = styled(
         return rawValue;
       },
     },
-  }
+  },
 );

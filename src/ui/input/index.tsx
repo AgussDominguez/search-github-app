@@ -6,7 +6,7 @@ const StyledRoot = styled(
   View,
   {
     borderWidth: 1,
-    borderColor: '$background300',
+    borderColor: '$primary',
     borderRadius: '$sm',
     flexDirection: 'row',
     overflow: 'hidden',

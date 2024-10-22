@@ -1,38 +1,43 @@
 import React from 'react';
-import {GluestackUIProvider, Text} from '@gluestack-ui/themed';
-import {config} from '@gluestack-ui/config';
+import {GluestackUIProvider, Text} from './components';
 import {View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
-
 function HomeScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <Text>Users Search Screen</Text>
     </View>
   );
 }
-
 function SettingsScreen() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
       <Text>Repositories Search Screen</Text>
     </View>
   );
 }
-
 export default function App() {
   return (
-    <GluestackUIProvider config={config}>
+    <GluestackUIProvider>
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={({route}) => ({
             tabBarIcon: ({focused}) => {
               const iconName = `${route.name === 'Users' ? 'people' : route.name === 'Repositories' ? 'folder' : ''}${!focused ? '-outline' : ''}`;
-
               return (
                 <Icon
                   name={iconName}

@@ -3,6 +3,7 @@ import {SearchPageTemplateProps} from './interfaces';
 import {SearchPageTemplateStyles} from './styles';
 import {View} from '@gluestack-ui/themed';
 import {Heading, Input, InputField} from '../../../ui';
+import SearchResultsTable from '../SearchResultsTable';
 
 const SearchPageTemplate: FC<SearchPageTemplateProps> = ({
   testID = 'search-page-template',
@@ -25,8 +26,26 @@ const SearchPageTemplate: FC<SearchPageTemplateProps> = ({
         isDisabled={false}
         isInvalid={false}
         isReadOnly={false}>
-        <InputField placeholder={`Insert ${type?.toLowerCase()} here....`} />
+        <InputField
+          placeholder={`Write the ${type?.toLowerCase()} name here....`}
+        />
       </Input>
+      <SearchResultsTable
+        resultsList={[
+          {
+            id: 1,
+            avatar_url: 'https://avatars.githubusercontent.com/u/73178068?v=4',
+            login: 'edu-amr',
+            url: 'https://api.github.com/users/AgussDominguez',
+          },
+          {
+            id: 2,
+            avatar_url: 'https://avatars.githubusercontent.com/u/91979239?v=4',
+            login: 'AgussDominguez',
+            url: 'https://api.github.com/users/edu-amr',
+          },
+        ]}
+      />
     </View>
   );
 };

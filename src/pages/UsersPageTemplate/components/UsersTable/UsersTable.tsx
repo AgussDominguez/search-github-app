@@ -1,7 +1,7 @@
 import {View} from '@gluestack-ui/themed';
 import React, {FC} from 'react';
 import {FlatList, ListRenderItem} from 'react-native';
-import {IUser} from '../../../pages/UsersPageTemplate/interfaces';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {
   Avatar,
   AvatarImage,
@@ -9,19 +9,20 @@ import {
   Button,
   ButtonText,
   HStack,
+  Spinner,
   Text,
-} from '../../../ui';
-import {SearchResultsTableProps} from './interfaces';
-import {SearchResultsTableStyles} from './styles';
-import Icon from 'react-native-vector-icons/Ionicons';
+} from '../../../../ui';
 
-const SearchResultsTable: FC<SearchResultsTableProps> = ({
+import {SearchResultsTableStyles} from './styles';
+import {UsersTableProps} from './interfaces';
+import {IUser} from '../../interfaces';
+
+const UsersTable: FC<UsersTableProps> = ({
   testID = 'search-results-table',
   style,
   resultsList,
+  loading,
 }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-
   const renderItem: ListRenderItem<IUser> = ({item}) => (
     <Box
       $base-pl={0}
@@ -46,7 +47,7 @@ const SearchResultsTable: FC<SearchResultsTableProps> = ({
           </Text>
         </Box>
 
-        <Box w="$32">
+        <Box w="$20">
           <Text
             alignSelf="flex-start"
             color="$coolGray800"
@@ -74,15 +75,21 @@ const SearchResultsTable: FC<SearchResultsTableProps> = ({
   return (
     <View testID={testID} style={[SearchResultsTableStyles.container, style]}>
       <Box py="$10">
-        <FlatList
-          data={resultsList}
-          renderItem={renderItem}
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          keyExtractor={(item: any) => item.id}
-        />
+        {resultsList && (
+          <FlatList
+            data={resultsList}
+            renderItem={renderItem}
+            keyExtractor={(item: IUser, index: number) =>
+              item.id.toString() + index.toString()
+            }
+            ListEmptyComponent={
+              loading ? <Spinner size="large" color={'$primary500'} /> : <></>
+            }
+          />
+        )}
       </Box>
     </View>
   );
 };
 
-export default SearchResultsTable;
+export default UsersTable;

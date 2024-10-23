@@ -1,15 +1,35 @@
-import React, {FC} from 'react';
-import {SearchPageTemplateProps} from './interfaces';
-import {SearchPageTemplateStyles} from './styles';
 import {View} from '@gluestack-ui/themed';
+import React, {FC} from 'react';
+import {useManageUsers} from '../../../pages/UsersPageTemplate/hooks/ManageUsers';
 import {Heading, Input, InputField} from '../../../ui';
-import SearchResultsTable from '../SearchResultsTable';
+import {SearchPageTemplateProps, SearchType} from './interfaces';
+import {SearchPageTemplateStyles} from './styles';
+import {useManageRepositories} from '../../../pages/RepositoriesPageTemplate/hooks/ManageRepositories/useManageRepositories';
+import RepositoriesTable from '../../../pages/RepositoriesPageTemplate/components/RepositoriesTable';
+import UsersTable from '../../../pages/UsersPageTemplate/components/UsersTable';
 
 const SearchPageTemplate: FC<SearchPageTemplateProps> = ({
   testID = 'search-page-template',
   style,
   type,
+  usersList,
+  repositoriesList,
+  loading,
 }) => {
+  const {updateTempQuery: updateUsersQuery} = useManageUsers();
+  const {updateTempQuery: updateRepositoriesQuery} = useManageRepositories();
+
+  const handleQuery = (value: string) => {
+    switch (type) {
+      case SearchType.Users:
+        updateUsersQuery(value);
+        break;
+
+      case SearchType.Repositories:
+        updateRepositoriesQuery(value);
+        break;
+    }
+  };
   return (
     <View
       p="$10"
@@ -27,25 +47,16 @@ const SearchPageTemplate: FC<SearchPageTemplateProps> = ({
         isInvalid={false}
         isReadOnly={false}>
         <InputField
+          onChangeText={handleQuery}
           placeholder={`Write the ${type?.toLowerCase()} name here....`}
         />
       </Input>
-      <SearchResultsTable
-        resultsList={[
-          {
-            id: 1,
-            avatar_url: 'https://avatars.githubusercontent.com/u/73178068?v=4',
-            login: 'edu-amr',
-            url: 'https://api.github.com/users/AgussDominguez',
-          },
-          {
-            id: 2,
-            avatar_url: 'https://avatars.githubusercontent.com/u/91979239?v=4',
-            login: 'AgussDominguez',
-            url: 'https://api.github.com/users/edu-amr',
-          },
-        ]}
-      />
+      {type === SearchType.Users && usersList !== undefined && (
+        <UsersTable loading={loading} resultsList={usersList} />
+      )}
+      {type === SearchType.Repositories && repositoriesList !== undefined && (
+        <RepositoriesTable loading={loading} resultsList={repositoriesList} />
+      )}
     </View>
   );
 };
